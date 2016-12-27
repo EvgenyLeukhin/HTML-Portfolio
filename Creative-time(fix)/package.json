@@ -1,0 +1,36 @@
+{
+  "name": "creative-time",
+  "version": "1.0.0",
+  "description": "fix-site for portfolio",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp build",
+    "less": "gulp watch"
+  },
+  "keywords": [
+    "fix-site"
+  ],
+  "author": "Evgeny Leukhin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "cache": "^1.1.2",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin": "^5.2.2",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

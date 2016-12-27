@@ -1,0 +1,31 @@
+@import "_libs/normalize.less"; // normalize
+@import "vars.less"; // файл с переменными
+@import "mixins.less"; // файл с примесями
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu Light", Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1100px;
+  min-width: 200px;
+  padding: 0 2%;
+  margin: 0 auto;
+  .clearfix();
+}
+
+@import "blocks/main-header.less";
+@import "blocks/calculation.less";
+@import "blocks/features.less";
+@import "blocks/discription.less";
+@import "blocks/promo.less";
+
+
+
+
+
