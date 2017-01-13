@@ -1,0 +1,27 @@
+.project {
+	min-height: 150px;
+	min-width: @base-width;
+	color: #fff;
+	background-image: linear-gradient(to right, #299cb5, #16c3cd);
+	font-family: "Source Sans Pro", "HelveticaBold", "Arial", sans-serif;
+	border: 1px solid #55b0c5;
+	.wrapper {
+		width: @base-width - 235px;
+		.project-btn {
+			.btn-block();
+		}
+	}
+	.text-cont {
+		width: 610px;
+		float: left;
+		text-align: left;
+		margin-top: 52px;
+		h2 {
+			font-weight: normal;
+			.fz(32px; 32px);
+		}
+		span {
+			.fz(17px; 30px);
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.page-header {
+	height: 568px;
+	min-width: @base-width;
+	margin-bottom: 65px;
+	background: #693e8b url("../img/bg-header.jpg") no-repeat center;
+	background-size: cover;
+	border-top: 1px solid transparent;
+	.menu-btn {
+		display: block;
+		margin-top: 40px;
+		height: 34px;
+		width: 34px;
+		background: #423362 url("../img/hamburger_icon.svg") no-repeat center;
+		background-size: 20px 20px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.title-cont {
+		font-family: "Source Sans Pro", "HelveticaBold", "Arial", sans-serif;
+		color: #fff;
+		margin-top: 105px;
+		margin-bottom: 115px;
+		text-align: center;
+		text-transform: uppercase;
+		.pre-title {
+			font-family: "HelveticaBold", "Myriad Pro Regular", "Arial", sans-serif;
+			font-weight: bold;
+			.fz(14px; 14px);
+		}
+		.main-title {
+			.fz(62px; 62px);
+			margin: 0;
+			margin-top: -2px;
+			margin-bottom: 10px;
+			text-shadow: 1px 2px 3px #ccc;
+		}
+		.title-disc {
+			font-family: "Verdana", "HelveticaBold", "Arial", sans-serif;
+			font-style: italic;
+			.fz(21px; 21px);
+			opacity: .3;
+			text-transform: none;
+		}
+	}
+	.btn-cont {
+		margin: 0 auto;
+		width: 307px;
+		height: 60px;
+		font-size: 0;
+		.btn {
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			.fz(13px; 40px);
+			font-family: "Source Sans Pro", "HelveticaBold", "Arial", sans-serif;
+			font-weight: bold;
+			margin-right: 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #000;
+			border-radius: 5px;
+			background-color: #fff;
+			height: 40px;
+			width: 143px;
+			box-shadow: 0px 0px 5px 1px #ccc;
+		}
+		.btn:last-child {
+			margin-right: 0;
+		}
+		.btn:hover {
+			background-color: #fff200;
+			box-shadow: 0px 0px 5px 1px #fff200;
+		}
+		.btn:active {
+			background-color: darken(#fff200, 15%);
+			box-shadow: 0px 0px 5px 1px #fff200;
+		}
+	}
+}

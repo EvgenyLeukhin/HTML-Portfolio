@@ -1,114 +1,160 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Константа</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--для IE-->
-	<meta name="keywords" content="Электромонтажные работы, Константа, Константа Омск">
-	<meta name="description" content="Электромонтажные работы в Омске">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="format-detection" content="telephone=no">
-	<link href="http://allfont.net/allfont.css?fonts=ubuntu-light" rel="stylesheet" type="text/css">
+	<link href="img/favicon.ico" type="image/png" rel="shortcut icon">
+	<title>CREATIVE TIME</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--IE-->
+	<meta name="keywords" content="Web-studio, CREATIVE TIME, Web-studio in Romania">
+	<meta name="description" content="Web-studio CREATIVE TIME. Do you want a new design for your product? We are ready to improve your app’s interface">
+	<meta name="viewport" content="width: 883">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	
+	<header class="page-header">
+		<div class="wrapper">
+			<a class="menu-btn"></a>
+			<div class="title-cont">
+				<span class="pre-title">Studio</span>
+				<h1 class="main-title"><strong>Creative time</strong></h1>
+				<p class="title-disc">
+					Hello, we design mobile &amp; web interfaces<br>
+					that are simple to use.
+				</p>
+			</div>
+	
+			<div class="btn-cont">
+				<a href="" class="btn">Hire</a>
+				<a href="" class="btn">Learn more</a>
+			</div>
+		</div>
+
+		<!-- <div class="full-menu"></div> -->
+	</header>
+
+	<!-- CSS-Slider -->
 	<div class="wrapper">
-		<header class="main-header">
-			<a href="index.html" title="На главную">
-				<img class="main-header__logo" src="img/logo.png" width="150" height="40" alt="logo">
-			</a>
-			<p class="main-header__contacts">
-				+7 983 563 93 84 <br>
-				constanta.mini@gmail.com
-			</p>
+		<ul class="promo">
+			<li class="promo-item sprite sprite-promo-1">
+				<h2>Get Started Instantly</h2>
+				<p>We'll start your project immediately using
+				unique strategies. Just press <a href="#">start</a> and
+				we’ll do the work for you.</p>
+			</li>
+			<li class="promo-item sprite sprite-promo-2">
+				<h2>Design &amp; Development</h2>
+				<p>We can offer you the full packet Design &amp; Development
+				for your project. All of that at a good deal.</p>
+			</li>
+			<li class="promo-item sprite sprite-promo-3">
+				<h2>Always On Time</h2>
+				<p>We know your time is important, so we don’t
+				waste it. All you have to do is set a deadline
+				and we’ll respect it.</p>
+			</li>
+		</ul>
 
-			<nav class="main-header__main-nav">
-				<ul class="main-menu">
-					<li><a class="active" href="#">Главная</a></li>
-					<li><a href="#">Прайс-лист</a></li>
-				</ul>
-			</nav>
-
-			<img class="main-header__banner" src="img/banner.png" alt="banner">
-		</header>
-
-		<section class="calculation">
-			<h2 class="calculation__title">Расчет стоимости электромонтажных работ</h2>
-			<div class="calculation__cont">
-				<form oninput="metr.value=(range_id.value)" action="#">
-
-					<div class="col col1">			
-						  <input id="range_id" type="range" min="0" max="200" value="0" step="1"><br>
-							<output name="metr">0</output>
-							<span class="number5">5</span>
-							<span class="number200">200</span>
+		<section class="slider"> 
+			<!-- Заголовок слайдера -->
+			<h2 class="slider-title">Here Are Some of Our Projects</h2>
+			<!-- Контейнер слайдера -->
+			<div class="slider-cont">
+				
+				<!-- Инпуты, которые будут display: none; -->
+				<input type="radio" id="btn-1" name="toggle" checked>
+				<input type="radio" id="btn-2" name="toggle">
+				<input type="radio" id="btn-3" name="toggle">
+				<!-- Управление слайдерами, label будут переключателями слайдов -->
+				<div class="slider-controls">
+					<label for="btn-1"></label>
+					<label for="btn-2"></label>
+					<label for="btn-3"></label>
+				</div>
+				
+				<!--Контейнер слайда-->
+				<div class="slider-inner">
+					<!--Контейнер ленты слайдов-->
+					<div class="slider-slides">
+						<img src="img/slide1.jpg" width="798" height="483" alt="slide1">
+						<img src="img/slide2.jpg" width="798" height="483" alt="slide2">
+						<img src="img/slide3.jpg" width="798" height="483" alt="slide3">
 					</div>
-
-					<div class="col col2">
-						<div class="col2-item">
-							<label for="metr_id">Площадь вашего помещения:</label>
-							<span class="result">0 <span>м<sup>2</sup></span></span>	<!--Реализуется на JS-->
-						</div>
-						
-						<div class="col2-item">
-							<label for="price_id">Стоимость работ от:</label>
-							<span class="result" id="price_id">000000 <span>₽</span></span> 			<!--Реализуется на JS-->
-						</div> 
-					</div>
-
-					<input type="submit" value="Заказать">
-
-				</form>
+				</div>
 			</div>
 		</section>
-
-		<ul class="features">
-			<li class="features__item">
-				<img src="img/star.png" alt="features__item" width="68" height="65">
-				<h2>Качественно</h2>
-				<p>Современная компания, выполняющая качественный электромонтаж.</p>
-			</li>
-			<li class="features__item">
-				<img src="img/clock.png" alt="features__item" width="68" height="65">
-				<h2>Скорость</h2>
-				<p>Услуги электромонтажа со сроком от 1 дня!</p>
-			</li>
-			<li class="features__item">
-				<img src="img/cash.png" alt="features__item" width="68" height="65">
-				<h2>Цена</h2>
-				<p>Предоставляем полную гарантию на работы от фирмы по цене частников!</p>
-			</li>
-		</ul>
-
-		<section class="discription">
-			<h2 class="discription__title">Выполняем все виды электромонтажных работ</h2>
-			<p class="discription__text">За многолетний период на предприятии сформировалась команда опытных и квалифицированных сотрудников, оперативно справляющихся как с заменой проводки, так и с установкой сложного технического оснащения. Применяя в работе полученные на практике знания, используя современные инструменты и оборудование, умелые мастера выполняют:</p>
-			<ul class="discription__list">
-				<li>электромонтаж любой сложности и объема;</li>
-				<li>подключение к электросети помещений различного назначения;</li>
-				<li>проектирование, монтаж, наладку и лабораторные испытания электросетей;</li>
-				<li>оформление договоров и лицевых счетов в организациях энергоснабжения</li>
-			</ul>
-			<a href="#" class="discription__link">Прайс-лист</a>
-		</section>
-
-		<ul class="promo">
-			<li class="promo__item">
-				<img src="img/promo-item1.jpg" alt="promo__item1" width="291" height="186">
-				<div class="hover-mask"></div>
-			</li>
-			<li class="promo__item">
-				<img src="img/promo-item1.jpg" alt="promo__item1" width="291" height="186">
-			</li>
-			<li class="promo__item">
-				<img src="img/promo-item3.jpg" alt="promo__item3" width="291" height="186">
-			</li>
-			<li class="promo__item">
-				<img src="img/promo-item4.jpg" alt="promo__item4" width="291" height="186">
-			</li>
-		</ul>
-		
-
 	</div>
+
+	<div class="project">
+		<div class="wrapper">
+			<div class="text-cont">
+				<h2>Do you want a new design for your product?</h2>
+				<span>We are ready to improve your app’s interface.</span>
+			</div>
+
+			<a class="project-btn" href="#">Start a project</a>
+		</div>
+	</div>
+
+	<div class="team">
+		<div class="wrapper">
+			<h2 class="team-title">Meet our team</h2>
+			<ul class="team-list">
+				<li class="team-list-item sprite-team sprite-team1">
+					<span class="name">Jonathan Kurten</span>
+					<span class="prof">Founder</span>
+				</li>
+				<li class="team-list-item sprite-team sprite-team2">
+					<span class="name">Charlie Waite</span>
+					<span class="prof">UI &amp; UX Creative Director</span>
+				</li>
+				<li class="team-list-item sprite-team sprite-team3">
+					<span class="name">Kelly Wirht</span>
+					<span class="prof">Engineer</span>
+				</li>
+				<li class="team-list-item sprite-team sprite-team4">
+					<span class="name">Frantisek Krivda</span>
+					<span class="prof">Designer</span>
+				</li>
+				<li class="team-list-item sprite-team sprite-team5">
+					<span class="name">Mihai Serban</span>
+					<span class="prof">Business Development</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="join-team">
+		<div class="wrapper">
+			<div class="text-cont">
+				<h2>Now hiring</h2>
+				<span>Creative Time is searching for new talents to join our team in Seattle, WA</span>
+			</div>
+			
+			<a class="join-team-btn" href="#">Join our team</a>
+		</div>
+	</div>
+
+
+
+
+
+<!-- 	<section class="team">
+		<div class="wrapper">
+			
+		</div>
+	</section>
+
+	<div class="join-team">
+		<div class="wrapper">
+			<h2>Now hiring</h2>
+			<span>Creative Time is searching for new talents to join our team in Seattle, WA</span>
+			<a href="#">Join our team</a>
+		</div>
+	</div>
+
+	<footer class="page-footer"></footer> -->
+
 </body>
 </html>

@@ -18,7 +18,9 @@ var gulp         = require('gulp'),											// Подгружаем сам gul
 		cache        = require('gulp-cache'),								// Подгружаем плагин cache
 		autoprefixer = require('gulp-autoprefixer'),				// Подгружаем плагин autoprefixer
 		svgmin       = require('gulp-svgmin'),							// Подгружаем плагин svgmin (svg-минификатор)
-		svgstore     = require('gulp-svgstore');						// Подгружаем плагин svgstore (svg-спрайты)
+		svgstore     = require('gulp-svgstore'),						// Подгружаем плагин svgstore (svg-спрайты)
+		csscomb      = require('gulp-csscomb'),							// Подгружаем плагин csscomb (комбинатор css-правил)
+		uncss        = require('gulp-uncss');								// Подгружаем плагин uncss (удаляет дублирование css-правил)
 
 
 // 2. Настойка плагинов:
@@ -153,7 +155,7 @@ gulp.task('img', function() {														// Команда в консоли |
 
 
 
-// SVG-спрайты (символьный svg-спрайт через id) ВРУЧНУЮ!!!
+// SVG-спрайты (символьный svg-спрайт через id) ВРУЧНУЮ!!! **********************надо посмотреть ещё
 
 gulp.task('icons-sprite', function() {														// Команда в консоли |gulp icons-sprite|
 	return gulp.src('src/img/icons/*.svg')													// Все изображения любых форматов
@@ -187,6 +189,28 @@ gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команд�
 
 
 
+// CSSCOMB (комбинатор css-правил) **********************надо посмотреть ещё
+
+gulp.task('csscomb', function() {																	// Команда в консоли |gulp csscomb|
+	return gulp.src('src/css/style.css')														// Выбираем style.css
+	.pipe(csscomb())																								// Обрабатываем style.css
+	.pipe(gulp.dest('src/css/'));																		// Куда сохранять обработанные
+});
+
+
+
+// UNCSS (убирает лишние css-правила)  **********************надо посмотреть ещё
+
+gulp.task('uncss', function() {																		// Команда в консоли |gulp uncss|
+	return gulp.src('src/css/style-comb.css')												// Выбираем style-comb.css
+	.pipe(uncss({
+		html: ['index.html', 'src/**/*.html', 'http://example.com']
+	}))																															// Выбиаем все html-файлы
+	.pipe(gulp.dest('src/css/'));																		// Куда сохранять обработанные
+});
+
+
+
 // BUILD-DONE работает при build
 
 gulp.task('build-done', function() {		// Команда в консоли |gulp build-done|
@@ -198,7 +222,7 @@ gulp.task('build-done', function() {		// Команда в консоли |gulp 
 
 // BUILD (сохранение готовых файлов проекта)
 
-gulp.task('build', ['del', 'img', 'less', 'css-min', 'build-done'], function() {						// Команда в консоли |gulp build|
+gulp.task('build', ['del', 'img', 'csscomb', 'uncss', 'less', 'css-min', 'build-done'], function() {						// Команда в консоли |gulp build|
 	var buildCss = gulp.src([
 		'src/css/*.css'
 	])
@@ -272,7 +296,7 @@ gulp.task('mytask', function() {												// команда в консоли 
 		gulp-svgstore |npm install gulp-svgstore --save-dev|		svg-спрайты
 		gulp-svgmin   |npm install gulp-svgmin --save-dev|			svg-минификатор
 
-npm i --save-dev gulp-less gulp-plumber gulp-postcss browser-sync gulp-concat gulp-concat-css
+npm i --save-dev gulp-less gulp-sass gulp-plumber gulp-postcss browser-sync gulp-concat gulp-concat-css
 
 npm i --save-dev gulp-uglifyjs gulp-cssnano gulp-rename cache imagemin imagemin-pngquant
 

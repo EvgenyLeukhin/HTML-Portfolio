@@ -18,6 +18,36 @@
 	list-style: none;
 }
 .fz(@fz; @lh) {
-    font-size: @fz;
-    line-height: @lh;
+	font-size: @fz;
+	line-height: @lh;
 }
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+	background-position: @x @y;
+	width: @width;
+	height: @height;
+}
+.btn-block() {
+	display: block;
+	float: right;
+	margin-top: 52px;
+	height: 55px;
+	width: 200px;
+	text-align: center;
+	.fz(14px; 55px);
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0px 0px 5px 1px #ccc;
+	&:hover {
+		background-color: #fff200;
+		box-shadow: 0px 0px 5px 1px #fff200;
+	}
+	&:active {
+	background-color: darken(#fff200, 15%);
+	box-shadow: 0px 0px 5px 1px #fff200;
+	}
+}
+

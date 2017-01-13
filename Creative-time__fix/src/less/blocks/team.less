@@ -1,0 +1,71 @@
+.team {
+	height: 325px;
+	min-width: @base-width;
+	background-color: #fff;
+	margin-top: 75px;
+	.wrapper {
+		width: @base-width - 235px;
+	}
+	&-title {
+		text-align: left;
+		.fz(28px; 30px);
+		color: #393c44;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+	&-list {
+		.list();
+		.fz(0; 0);
+		text-align: left;
+		&-item {
+			.fz(14px; 14px);
+			font-family: "Centrale Sans Bold", "Impact";
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			height: 190px;
+			width: 132px;
+			padding-top: 145px;
+			margin-right: 55px;
+			.name {
+				display: block;
+				color: #000;
+				margin-bottom: 2px;
+			}
+			.prof {
+				display: block;
+				color: #f44336;
+			}
+		}
+		&-item:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.sprite-team {
+    background-image: url("../img/team-sprite.png");
+    background-repeat: no-repeat;
+
+    &.sprite-team1 {
+        .stitches-sprite(-5px, -5px, 132px, 132px);
+    }
+
+    &.sprite-team2 {
+        .stitches-sprite(-147px, -5px, 132px, 132px);
+    }
+
+    &.sprite-team3 {
+        .stitches-sprite(-289px, -5px, 132px, 132px);
+    }
+
+    &.sprite-team4 {
+        .stitches-sprite(-431px, -5px, 132px, 132px);
+    }
+
+    &.sprite-team5 {
+        .stitches-sprite(-573px, -5px, 132px, 132px);
+    }
+}
+
+
