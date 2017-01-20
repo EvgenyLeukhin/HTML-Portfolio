@@ -1,56 +1,43 @@
 // 1. Подгружаем плагины, сохраняем их в переменные после установки:
 
-var gulp         = require('gulp'),											// Подгружаем сам gulp
-		less         = require('gulp-less'),								// Подгружаем плагин less
-		sass         = require('gulp-sass'),								// Подгружаем плагин sass
-		postcss      = require('gulp-postcss'),							// Подгружаем плагин postcss 
-		plumber      = require('gulp-plumber'),							// Подгружаем плагин plumber (выполняет с ошибками, не останавливает)
-		mqpacker     = require('css-mqpacker'),							// Подгружаем плагин mqpacker (объединяет медиа-выражения)
-		browserSync  = require('browser-sync'),							// Подгружаем плагин browser-sync
-		concat       = require('gulp-concat'),							// Подгружаем плагин concat
-		concatCss    = require('gulp-concat-css'),					// Подгружаем плагин concat-css
-		uglify       = require('gulp-uglify'),							// Подгружаем плагин uglify
-		cssnano      = require('gulp-cssnano'),							// Подгружаем плагин cssnano
-		rename       = require('gulp-rename'),							// Подгружаем плагин rename
-		del          = require('del'),											// Подгружаем плагин del
-		imageMin     = require('gulp-imagemin'),						// Подгружаем плагин gulp-imagemin
-		pngquant     = require('imagemin-pngquant'),				// Подгружаем плагин imagemin-pngquant
-		cache        = require('gulp-cache'),								// Подгружаем плагин cache
-		autoprefixer = require('gulp-autoprefixer'),				// Подгружаем плагин autoprefixer
-		svgmin       = require('gulp-svgmin'),							// Подгружаем плагин svgmin (svg-минификатор)
-		svgstore     = require('gulp-svgstore'),						// Подгружаем плагин svgstore (svg-спрайты)
-		csscomb      = require('gulp-csscomb'),							// Подгружаем плагин csscomb (комбинатор css-правил)
-		uncss        = require('gulp-uncss');								// Подгружаем плагин uncss (удаляет дублирование css-правил)
+var gulp         = require('gulp'),											// gulp
+		browserSync  = require('browser-sync'),							// локальный сервер, синхронизатор
+		del          = require('del'),											// удалятор файлов
+		cache        = require('gulp-cache'),								// очистка кэша
+		rename       = require('gulp-rename'),							// переименовка фалов
+		
+		// Компиляция less-кода
+		plumber      = require('gulp-plumber'),							// plumber (выполняет с ошибками, не останавливает) НЕ РАБОТАеТ!!!
+		less         = require('gulp-less'),								// компилятор less - css
+		autoprefixer = require('gulp-autoprefixer'),				// autoprefixer
+		postcss      = require('gulp-postcss'),							// компилятор postcss - css
+		mqpacker     = require('css-mqpacker'),							// mqpacker (объединяет медиа-выражения)
+
+		// Конкатинация (вручную)
+		concat       = require('gulp-concat'),							// объединение js-файлов
+		concatCss    = require('gulp-concat-css'),					// объединение css-файлов
+
+		// Минификация (вручную)
+		uglify       = require('gulp-uglify'),							// минификатор js-файлов (вручную)
+		cssnano      = require('gulp-cssnano'),							// минификатор css-файлов (вручную)
+
+		// Сжатие изображений
+		imageMin     = require('gulp-imagemin'),						// gulp-imagemin
+		pngquant     = require('imagemin-pngquant'),				// imagemin-pngquant
+		svgmin       = require('gulp-svgmin'),							// svgmin (svg-минификатор)
+		svgstore     = require('gulp-svgstore'),						// svgstore (svg-спрайты) НЕ ИСПОЛЬЗОВАЛ ЕЩЁ!!!
+
+		// Сжатие CSS
+		csscomb      = require('gulp-csscomb'),							// csscomb (комбинатор css-правил) НЕ ИСПОЛЬЗОВАЛ ЕЩЁ!!!
+		uncss        = require('gulp-uncss');								// uncss (удаляет дублирование css-правил) НЕ ИСПОЛЬЗОВАЛ ЕЩЁ!!!
 
 
 // 2. Настойка плагинов:
 
 
-// SASS (npm i gulp-sass --save-dev) !!! Почему-то криво работает с browser-sync (не сохраняет, если редактировать импортируемые sass-файлы)
+// LESS (npm i gulp-less --save-dev)										style.less
 
-gulp.task('sass', function() {													// Команда в консоли |gulp sass|
-	return gulp.src('src/sass/style.sass')								// Исходники
-	.pipe(plumber())																			// Работа плагина plumber
-	.pipe(sass())																					// Работа плагина sass
-	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
-		'last 15 versions', 																// последние 15-ать версий браузеров
-		'> 1%', 																						// для IE
-		'ie 8', 																						// поддержка IE8
-		'ie 7' 																							// поддержка IE7
-	], 
-		{ cascade: true }))																	// Формаирование кода
-	.pipe(postcss([
-		mqpacker({sort: true})															// Сортировка медиа-выражений
-	]))
-	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у sass
-	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
-});
-
-
-
-// LESS (npm i gulp-less --save-dev)
-
-gulp.task('less', function() {							// Команда в консоли |gulp less|
+gulp.task('less', function() {													// Команда в консоли |gulp less|
 	return gulp.src('src/less/style.less')								// Исходники
 	.pipe(plumber())																			// Работа плагина plumber
 	.pipe(less())																					// Работа плагина less
@@ -66,37 +53,6 @@ gulp.task('less', function() {							// Команда в консоли |gulp l
 	]))
 	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у less
 	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
-});
-
-
-
-// JS-CONCAT (ДЛЯ JS-БИБЛИОТЕК) ВРУЧНУЮ!!!
-
-gulp.task('js-libs', function() {												// Команда в консоли |gulp js-libs|
-	return gulp.src([																			// Перечень js-библиотек для конкатинации
-		'src/js/libs/angular/angular.min.js', 
-		'src/js/libs/bootstrap/dist/js/bootstrap.min.js',
-		'src/js/libs/jquery/dist/jquery.min.js',
-		'src/js/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'src/js/libs/react/react.min.js'
-	])
-	.pipe(concat('libs.min.js'))													// Конкатинируем в готовый файл
-	.pipe(uglify())																				// Минифицируем
-	.pipe(gulp.dest('src/js'));														// Директория для готового файла 
-});
-
-
-
-// CSS-CONCAT (ДЛЯ CSS-БИБЛИОТЕК) ВРУЧНУЮ!!!
-
-gulp.task('css-libs', function() {											// Команда в консоли |gulp css-libs|
-	return gulp.src([ 																		// Пути к css-библиотекам
-		'src/css/some-lib1.css',
-		'src/css/some-lib2.css'
-	])
-	.pipe(concatCss('libs.min.css'))											// Конкатинируем в готовый файл
-	.pipe(cssnano())																			// Минифицируем
-	.pipe(gulp.dest('src/css/'));													// Директория для готового файла 
 });
 
 
@@ -179,13 +135,7 @@ gulp.task('watch', ['browser-sync', 'less'], function() {		// Команда в 
 
 
 
-// WATCH-SASS (если пользуемся sass) 
 
-gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команда в консоли |gulp watch-sass|, ['browser-sync и sass'] запустится до watch
-	gulp.watch('src/sass/**/*.sass', ['sass']);											// Какие файлы вотчить и какой ['sass'] при этом выполнять
-	gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
-	gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
-});
 
 
 
@@ -222,7 +172,7 @@ gulp.task('build-done', function() {		// Команда в консоли |gulp 
 
 // BUILD (сохранение готовых файлов проекта)
 
-gulp.task('build', ['del', 'img', 'csscomb', 'uncss', 'less', 'css-min', 'build-done'], function() {						// Команда в консоли |gulp build|
+gulp.task('build', ['del', 'img', 'less', 'css-min', 'build-done'], function() {						// Команда в консоли |gulp build|
 	var buildCss = gulp.src([
 		'src/css/*.css'
 	])
@@ -326,3 +276,42 @@ npm i --save-dev del gulp-cache gulp-autoprefixer css-mqpacker gulp-svgstore gul
 (в этой новой директории) | npm i |, в этом случае поставяться все плагины, который указаны в package.json
 
 */
+
+
+
+
+
+
+
+
+
+
+// SASS (npm i gulp-sass --save-dev) !!! Почему-то криво работает с browser-sync (не сохраняет, если редактировать импортируемые sass-файлы)
+
+// gulp.task('sass', function() {													// Команда в консоли |gulp sass|
+// 	return gulp.src('src/sass/style.sass')								// Исходники
+// 	.pipe(plumber())																			// Работа плагина plumber
+// 	.pipe(sass())																					// Работа плагина sass
+// 	.pipe(autoprefixer([																	// Работа плагина autoprefixer 
+// 		'last 15 versions', 																// последние 15-ать версий браузеров
+// 		'> 1%', 																						// для IE
+// 		'ie 8', 																						// поддержка IE8
+// 		'ie 7' 																							// поддержка IE7
+// 	], 
+// 		{ cascade: true }))																	// Формаирование кода
+// 	.pipe(postcss([
+// 		mqpacker({sort: true})															// Сортировка медиа-выражений
+// 	]))
+// 	.pipe(gulp.dest('src/css'))														// Директория сохранения, название файла будет как у sass
+// 	.pipe(browserSync.reload({stream: true}));						// Для перезагрузки сервера browser-sync при изменении
+// });
+
+
+
+// WATCH-SASS (если пользуемся sass) 
+
+// gulp.task('watch-sass', ['browser-sync', 'sass'], function() {		// Команда в консоли |gulp watch-sass|, ['browser-sync и sass'] запустится до watch
+// 	gulp.watch('src/sass/**/*.sass', ['sass']);											// Какие файлы вотчить и какой ['sass'] при этом выполнять
+// 	gulp.watch('src/**/*.html', browserSync.reload);								// Вотчим html-файлы и перезагружаем browserSync при редактировании html
+// 	gulp.watch('src/js/**/*.js', browserSync.reload);								// Вотчим js-файлы и перезагружаем browserSync при редактировании js
+// });

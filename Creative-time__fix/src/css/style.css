@@ -409,12 +409,62 @@ img {
   clear: both;
 }
 .page-header {
+  position: relative;
   height: 568px;
   min-width: 1118px;
   margin-bottom: 65px;
   background: #693e8b url("../img/bg-header.jpg") no-repeat center;
   background-size: cover;
   border-top: 1px solid transparent;
+}
+.page-header .modal-window {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 400px;
+  margin-top: -200px;
+  /*Половина от высоты*/
+  margin-left: -200px;
+  /*Половина от ширины*/
+  padding-top: 20px;
+}
+.page-header .modal-window .main-menu {
+  list-style: none;
+  text-align: left;
+}
+.page-header .modal-window .main-menu a {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+.page-header .modal-window .main-menu a:hover {
+  background-color: #fff200;
+  text-decoration: underline;
+}
+.page-header .modal-window .close-btn {
+  position: absolute;
+  z-index: 110;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-cross.png");
+  right: -30px;
+  top: -5px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+.page-header .modal-window-show {
+  display: block;
 }
 .page-header .menu-btn {
   display: block;
@@ -777,12 +827,11 @@ img {
   min-width: 1118px;
   color: #fff;
   background: url("../img/glasses.jpg") no-repeat;
-  background-size: cover;
-  background-size: 100%;
+  background-size: 100% 150px;
   font-family: "Source Sans Pro", "HelveticaBold", "Arial", sans-serif;
 }
 .join-team .wrapper {
-  width: 883px;
+  width: 977px;
 }
 .join-team .wrapper .join-team-btn {
   display: block;
@@ -820,11 +869,98 @@ img {
   margin-top: 52px;
 }
 .join-team .text-cont h2 {
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 35px;
 }
 .join-team .text-cont span {
   font-size: 17px;
   line-height: 30px;
+}
+.page-footer {
+  min-height: 318px;
+  background: url("../img/bg-footer.jpg") no-repeat;
+  background-size: 100% 318px;
+  padding-top: 95px;
+  min-width: 1118px;
+}
+.page-footer .wrapper {
+  width: 1118px -141px;
+  height: 175px;
+}
+.page-footer .wrapper .left-columns {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 595px;
+  font-size: 0;
+  text-align: left;
+}
+.page-footer .wrapper .left-columns .column {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-right: 65px;
+}
+.page-footer .wrapper .left-columns .column:last-child {
+  margin-right: 0;
+}
+.page-footer .wrapper .left-columns .column h2 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.page-footer .wrapper .left-columns .column .links-list {
+  list-style: none;
+}
+.page-footer .wrapper .left-columns .column .links-list a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b5b1b1;
+  display: block;
+  margin-bottom: 8px;
+}
+.page-footer .wrapper .left-columns .column .links-list a .mark {
+  background-color: yellow;
+  position: relative;
+  top: -3px;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  font-size: 9px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  height: 20px;
+  width: 70px;
+  margin-left: 10px;
+}
+.page-footer .wrapper .right-column {
+  margin-top: 5px;
+  width: 220px;
+  float: right;
+  font-family: "Source Sans Pro", "HelveticaBold", "Arial", sans-serif;
+  font-size: 21px;
+  color: #fff;
+  text-align: right;
+}
+.page-footer .wrapper .right-column h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+.page-footer .wrapper .right-column .copyright {
+  font-size: 14px;
+  color: #b5b1b1;
+}
+.page-footer .wrapper .romania {
+  padding-top: 15px;
+  font-size: 14px;
+  color: #b5b1b1;
+  clear: both;
 }

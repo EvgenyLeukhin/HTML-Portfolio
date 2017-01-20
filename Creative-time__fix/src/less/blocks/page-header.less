@@ -1,10 +1,55 @@
 .page-header {
+	position: relative;
 	height: 568px;
 	min-width: @base-width;
 	margin-bottom: 65px;
 	background: #693e8b url("../img/bg-header.jpg") no-repeat center;
 	background-size: cover;
 	border-top: 1px solid transparent;
+	.modal-window {
+		display: none;
+		position: absolute;
+		z-index: 100;
+		top: 50%;
+		left: 50%;
+		height: 400px;
+		width: 400px;
+		margin-top: -200px;/*Половина от высоты*/
+		margin-left: -200px;/*Половина от ширины*/
+		padding-top: 20px;
+		.main-menu {
+			list-style: none;
+			text-align: left;
+			a {
+				padding: 20px;
+				margin: 10px;
+				border: 1px solid #000;
+				background-color: rgba(256, 256, 256, .8);
+				display: block;
+				text-decoration: none;
+				color: inherit;
+				text-transform: uppercase;
+				&:hover {
+					background-color: #fff200;
+					text-decoration: underline;
+				}
+			}
+		}
+		.close-btn {
+			position: absolute;
+			z-index: 110;
+			display: block;
+			width: 30px;
+			height: 30px;
+			background-image: url("../img/icon-cross.png");
+			right: -30px;
+			top: -5px;
+			.link-styles-off();
+		}
+	}
+	.modal-window-show {
+		display: block;
+	}
 	.menu-btn {
 		display: block;
 		margin-top: 40px;
