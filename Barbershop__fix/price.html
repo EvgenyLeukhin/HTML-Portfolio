@@ -103,6 +103,24 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-window">
+        <div class="modal-window-close"></div>
+        <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+        <span>ВВЕДИТЕ ПОЖАЛУЙСТА СВОЙ ЛОГИН И ПАРОЛЬ</span><br>
+        <a class="pw-lost" href="#">ЕСЛИ ВЫ ЗАБЫЛИ ПАРОЛЬ</a>
+        <form method="post" action="page.php">
+            <input class="icon-login" type="text" name="login" placeholder="ЛОГИН">
+            <input class="icon-pw" type="password" name="pw" placeholder="ПАРОЛЬ">
+            <fieldset>
+                <input type="checkbox" name="remember-me" id="remember-me-id">
+                <label for="remember-me-id">ЗАПОМНИТЕ МЕНЯ</label>
+                <a class="pw-lost2" href="#">Я ЗАБЫЛ ПАРОЛЬ</a>
+            </fieldset>
+            <input type="submit" value="ВОЙТИ">
+            <div class="close"></div>
+        </form>
+    </div>
     
     
     <script src="js/main.js"></script>
