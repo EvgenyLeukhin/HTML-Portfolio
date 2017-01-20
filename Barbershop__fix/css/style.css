@@ -1,0 +1,609 @@
+/*Barbershop Borodinski by Evgeny Leukhin*/
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'),
+        url('../fonts/PTSansNarrow.eot') format('eot'),    
+        url('../fonts/PTSansNarrow.ttf') format('truetype'),
+        url('../fonts/PTSansNarrow.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'),
+        url('../fonts/PTSansNarrowBold.eot') format('eot'),    
+        url('../fonts/PTSansNarrowBold.ttf') format('truetype'),
+        url('../fonts/PTSansNarrowBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+} 
+html, body {
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    background: #2d2d2d url(../img/bg-main.png) no-repeat 50% 15px;
+    color: #fff;
+}
+.layout-positioner {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.main-header {
+    background-color: #000;
+}
+/*Чтобы не пропадал фон*/
+@media screen and (max-width:960px) {
+    .main-header {width: 980px;}
+    .main-footer {width: 980px;}
+    .main-content.price-list {width: 980px;}
+}
+.main-navigation {float: left;}
+.main-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.main-menu li {
+    display: inline-block;    
+    white-space: nowrap;   
+}
+.main-menu a {  
+    display: block;
+    padding: 25px 21px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}	
+.main-menu .active::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: -4px;
+}
+.main-menu a:hover {
+    background-color: #111;
+}
+.main-menu .active:hover {
+    background-color: #000;
+    cursor: auto;
+}
+.user-block {float: right;}
+.user-block a {
+    display: block;
+    padding: 25px 0px;
+    padding-left: 45px;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    background-image: url(../img/ico-enter.png);
+    background-repeat: no-repeat;
+    background-position: 10px 28px;
+    opacity: .5;
+} 
+.user-block a:hover {
+    background-color: #111;
+    opacity: 1;
+}
+.main-content .logo {
+    display: block;
+    width: 368px;
+    margin: 0 auto;
+    margin-top: 57px;
+    margin-bottom: -15px;
+    text-decoration: none;
+} 
+.features {
+    margin-bottom: 78px;
+    text-align: center;
+    font-size: 0px;
+}
+.feature-item {display: inline-block;}
+.feature-item:first-child {margin-right: 66px;}
+.feature-item:nth-child(2) {margin-right: 45px;}
+.feature-item .feature-title {font-size: 30px;}
+.feature-item .feature-title::after {
+        content:'';
+        display: block;
+        margin: 22px auto;
+        margin-bottom: 34px;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+.feature-item .feature-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+.index-content {
+    padding: 48px 80px;
+    padding-bottom: 54px;
+    margin-bottom: 35px;
+    background-color: #fff;
+    background-image: url(../img/texture1.jpg);
+    color: #000;
+}
+.index-content .layout-left-column {
+    float: left;
+    position: relative;
+}
+.index-content .layout-left-column::after {
+    position: absolute;
+    content:'';
+    display: block;
+    width: 8px;
+    height: 278px;
+    background-image: url(../img/divaider.png);
+    top: 20px;
+    left: 392px;
+}
+.index-content .layout-right-column {
+    float: right;
+    padding-right: 21px;
+    width: 280px;
+}
+.index-content .index-content-title {
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.index-content .news, .news p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 24px;
+}
+.news li {margin-bottom: 23px;}
+.news li:last-child {margin-bottom: 29px;}
+.news i {font-weight: normal;}
+.index-content .btn {
+    display: block;
+    float: left;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    padding: 12px 30px;
+    margin-right: 20px;
+}
+.index-content .btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+}
+.index-content .photogallery {
+    height: 176px;
+    width: 300px;
+    margin-bottom: 42px;
+    background: #fff url(../pict/gallery1.jpg) no-repeat 50%;
+}
+.photogallery-btn {
+    display: block;
+    float: left;
+    width: 140px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    background-color: #000;
+    margin-top: 3px;
+    padding: 11px 0;
+    border: none;
+    position: relative;
+}
+.photogallery-btn:last-child {left: 20px;}
+.photogallery-btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #fff; 
+}
+.contacts p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.contacts .btn {margin-bottom: 7px;}
+.index-content-title + p {width: 300px;}
+.contacts form {
+    width: 300px;
+    margin-top: -18px;
+    color: #000;
+}
+.contacts input {
+    width: 120px;
+    height: 38px;
+    border: 2px solid black;
+    margin-bottom: 19px;
+    padding-left: 15px;
+    color: #000;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow';
+    font-weight: bold;
+}
+.contacts #date-id, .contacts #name-id {margin-right:20px;}
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 43px;
+    margin: 0;
+    margin-top: 13px;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+}
+input[type="submit"]:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+}
+.main-footer {
+    background-image: url(../img/texture2.jpg);
+    height: 190px;
+    text-align: center;
+}
+.main-footer .contacts {
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 56px;
+}
+.main-footer .social {
+    display: inline-block;
+    margin-top: 43px;
+    position: relative;
+    right: 51px;
+}
+.main-footer .design {
+    float: right;
+}
+.social .social-link {
+    display: block;
+    float: left;
+    height: 43px;
+    width: 43px;
+    background-color: #000;
+    margin-top: -10px;
+    margin-right: 6px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+} 
+.social .social-link:last-child {margin-right: 0;}
+.social-link.vk {
+   background-position: 15px 10px; 
+}
+.social-link.fb {
+   background-position: -43px 10px; 
+}
+.social-link.ins {
+   background-position: -112px 10px; 
+}
+.social .social-link:hover {
+    background-image: url(../img/sprite2.png);
+    background-color: #fff;
+}
+.main-footer .design {
+    margin-top: 43px;
+}
+.design .design-link {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    margin-top: -10px;
+    width: 140px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+.design .design-link:hover {
+    color: #000;
+    background-color: #fff;
+}
+.main-content.price-list {
+    background: #fff url(../img/texture1.jpg);
+    color: #000;
+    margin-top: -17px;
+}
+.price-list h1 {
+    font-size: 30px;
+    padding-top: 24px;
+}
+.bredcrumbs .bredcrumbs-link {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    margin-right: 34px;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+.bredcrumbs-link::after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    background: #000;
+-webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: -23px;
+}
+.bredcrumbs-link:first-child::after {display: none;}
+.price-list-promo {
+    font-size: 48px;
+    text-align: center;
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 39px auto;
+    margin-bottom: 32px;
+    position: relative;
+}
+.price-list-promo::before {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: -160px;
+    top: 50%;
+}
+.price-list-promo::after {
+    content: '';
+    display: block;
+    width: 160px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    right: -160px;
+    top: 50%;
+}
+.price-list .layout-left-column {
+    float: left;
+    width: 380px;
+}
+.price-list .layout-right-column {
+    float: right;
+    width: 460px;
+}
+.price-title {
+    font-size: 24px;
+    margin-bottom: 28px;
+}
+.product-list {
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: 48px;
+    padding: 0;
+    list-style-position: inside;
+    list-style-image: url(../img/list-bullet.png);
+}
+.product-list-item {
+    font-size: 14px;
+    padding: 9px 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+.price-content p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 72px;
+}
+.price-table {
+    border-collapse: collapse;
+}
+.price-table td {
+    padding: 10px;
+    width: 226px;
+    border: 2px solid black;
+}
+.price-table td:nth-child(even) {text-align: center;}
+/*модальное окно перед </body>*/
+.modal-window {
+    position: fixed;
+    content: "";
+    display: none;     /*JS onClick*/
+    width: 300px;
+    height: 315px;
+    padding: 50px 80px;
+    padding-bottom: 60px;
+    background: #fff url(../img/texture1.jpg);
+    box-shadow: 0px 8px 15px 8px #000;
+    color: #000;
+    top: 120px;
+    left: 50%;
+    margin-left: -230px;
+    font-size: 14px;
+    line-height: 24px;
+}
+.modal-window-show {
+    display: block;     /*JS onClick*/
+    animation-name: show;
+    animation-duration: 0.6s;
+}
+/*
+.modal-window-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
+}*/
+.modal-window h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 42px;
+    margin-top: -6px;
+    margin-bottom: 17px;
+}
+.pw-lost {
+    margin-bottom: 28px;
+    color: inherit;
+    text-decoration: none;
+}
+.modal-window form {padding-top: 27px;}
+.modal-window input[type="text"], .modal-window input[type="password"] {
+    display: block;
+    padding: 10px;
+    padding-right: 42px;
+    margin-bottom: 9px;
+    width: 245px;
+    border: 2px solid #000;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+        -ms-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+}
+input[type="text"].icon-login {
+    background: #fff url(../img/icon-login.png) no-repeat
+    right;
+}
+input[type="password"].icon-pw {
+    background: #fff url(../img/icon-pw.png) no-repeat
+    96%;
+}
+.modal-window fieldset {
+    border: none;
+    padding: 0;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+.pw-lost2 {
+    display: block;
+    float: right;
+    color: inherit;
+    text-decoration-color: #7d7c7a;
+}
+.modal-window input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+    color: #fff;
+    width: 100%;
+    border: none;
+}
+.modal-window input[type="submit"]:hover {
+    color: #000;
+}
+.modal-window .close {
+    position: absolute;
+    top: 60px;
+    right: -70px;
+    height: 21px;
+    width: 21px;
+    background: #000 url(../img/icon-close.png) no-repeat;
+    cursor: pointer;
+}
+/*Стилизация checkbox*/
+/*    1. Убираем системный чекбокс    */
+.modal-window input[type="checkbox"] {
+    display: none;
+}
+/*    2. Стилизуем лейбл    */
+.modal-window input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 32px;
+}
+/*    3. Лейбл при наведении    */
+.modal-window input[type="checkbox"] + label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*    4. Рамочка для кастомного чекбокса на поз. псевдоэлементе    */
+.modal-window input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    left: -2px;
+}
+/*    5. Чекбокс появляется, если лейбл отмечен    */
+.modal-window input[type="checkbox"]:checked + label::before {
+    background: url(../img/icon-checkbox.png) no-repeat 50%;
+}
+.modal-window2 {
+    position: fixed;
+    display: none;
+    width: 794px;
+    height: 394px;
+    border: 3px solid #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -203px;/*Половина от высоты*/
+    margin-left: -403px;/*Половина от ширины*/
+    background-color: #fff;
+    box-shadow: 0px 4px 10px 4px #000;
+}
+.modal-window2-show {
+    display: block;
+    animation-name: show;
+    animation-duration: 0.6s;
+}
+.modal-window2 .close {
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    height: 21px;
+    width: 21px;
+    background: #000 url(../img/icon-close.png) no-repeat;
+    cursor: pointer;
+}
+
+/*Если лейбл в макете будет стоять в другом месте не рядом с инпутом, то можно связать лейбл с полем
+через селектор ~ и атрибут for у лейбла, который связывает элементы на любом уровне, и в таком случае 
+селекторы бы выглфдели так:
+    1 .modal-window input[type="checkbox"] {...}
+    2 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"] {...}
+    3 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"]:hover {...}
+    4 .modal-window input[type="checkbox"] ~ label[for="remember-me-id"]::before {...}
+    5 .modal-window input[type="checkbox"]:checked + label[for="remember-me-id"]::before {...}
+*/
+/*Анимация для появления модального окна*/
+@keyframes show {
+    0%   {transform: translateY(-2000px);}
+    70%  {transform: translateY(30px);}
+    90%  {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+/*Анимация для неправильного заполнения формы
+@keyframes shake {
+    0%, 100%                {transform: translateX(-2000px);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(30px);}
+    20%, 40%, 60%, 80%      {transform: translateX(-10px);}
+}*/
