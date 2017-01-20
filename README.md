@@ -1,8 +1,8 @@
 # Portfolio
 Evgeny Leukhin Portfolio
-<hr>
-Mail: EvgenyLeukhin@ya.ru
 <br>
-GutHub Hosting:
+Mail: EvgenyLeukhin@ya.ru
+<hr>
+<b>GutHub Hosting:</b>
 <br>
 Creative-time__fix: <https://evgenyleukhin.github.io/Portfolio/Creative-time__fix/dist>
