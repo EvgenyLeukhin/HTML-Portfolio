@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>SCANDIC</title>
+  <link href="img/ico-blank.png" type="image/png" rel="shortcut icon"><!--Иконка в title-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--для IE-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="SCANDIC, Новости, Новостной портал, Russia news">
+  <meta name="description" content="Портал свежих и интересных новостей SCANDIC">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script async src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="wrapper clearfix">
+      <a class="logo-block" href="index.html" title="Scandic">
+        <img src="img/logo.png" alt="logo" class="logo" height="60" width="71">
+        <h1>Scandic</h1>
+      </a>
+      <nav class="nav-btns">
+        <a href="#" class="nav-btn search"></a>
+        <a href="#" class="nav-btn main-menu-btn"></a>
+      </nav>
+      <div class="modal-window">
+        <nav class="main-nav">
+          <ul class="main-menu">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Продукция</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Архитекторам</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="close"></div>
+      </div>
+      
+      <div class="search-field">
+        <form action="page.php" method="get" id="search-form">
+          <input type="text" placeholder="Поиск...">
+          <span class="search-close"></span>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+
+  </header>
+   
+   <div class="wrapper">
+    
+    <img src="img/top-image.jpg" alt="top-image" class="top-image" width="1200" height="421">
+    
+    <section class="main-content">
+      <h2 class="news-title">Новости</h2>
+      
+      <article class="page-news clearfix">
+        <div class="top-cont clearfix">     
+          <header class="clearfix">
+            <h3 class="page-news-title">Выставка в Казахстане – KazBuild Almaty 2016</h3>
+            <p class="page-news-date">18.09.2016</p>
+          </header>
+          
+          <img src="pict/news-page-18-09-16.jpg" alt="news-18-09-16" class="page-news-img" height="360" width="553">
+          
+          <p class="page-news-description">
+            Компания Skaala приняла участие в крупнейшей строительной выставке в Казахстане – KazBuild Almaty 2016 и в очередной раз привлекла внимание инновациями в оконной вентиляции (Skaala Alfa Clean). В этом году выставка поразила большим количеством участников и посетителей среди которых были и европейские компании из Германии, Италии, Финляндии а также ОАЭ.
+          </p>
+        </div> 
+        
+        <p class="page-news-text">
+          В этом году выставка поразила большим количеством участников и посетителей. Европейские компании из Германии, Италии, Финляндии а также ОАЭ – представили продукцию своих компаний.
+          Skaala, в очередной раз привлекла внимание инновациями в оконной вентиляции (Skaala Alfa Clean). Эта уникальная система была центром внимания и всеобщего обсуждения по востребованности данного продукта на рынке Казахстана. Дерево-алюминиевые окна Skaala – это самое лучшее решение 
+          по остеклению для климатической зоны Алма-Аты. Постоянное воздействие солнечных лучей на внешнюю поверхность окон со стороны улицы, приводит к деформации и изменению цвета пластиковых профилей. Деревянное окно, облицованное алюминием снаружи – вот продукт, необходимый для строительной отрасли Казахстана. 
+        </p>
+        <p class="page-news-text">
+          Сотрудники Skaala – Хенри Риихимяки (ген.директор завода в Санкт-Петербурге), Любовь Ван-дер-Флаас (координатор проектов в Санкт-Петербурге), Оксана Васке (взаимодействие заводов СПб – Финляндия) – ознакомили всех желающих с продукцией финского оконного завода Skaala. 
+          Eсть уверенность в заключении контрактов на остекление объектов по всему Казахстану.
+        </p>
+        
+      </article>
+      
+      <div class="paginator-page-news clearfix">
+        <div class="prev">
+          <a href="#" class="arrow prev"></a>
+          <a href="#" class="prev-link">предыдущая</a>
+        </div>
+        <div class="next"> 
+          <a href="#" class="arrow next"></a>
+          <a href="#" class="next-link">следущая</a>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+  
+  <footer class="main-footer">
+    <div class="wrapper">
+      <form class="feedback-form clearfix" action="page.pnp" method="post" id="feedback-form">
+        <div class="user-contacts">
+          <a href="#" class="get-answers">Есть вопросы?</a>
+          <input class="form-input name-input" type="text" id="first-name-id" name="first-name" placeholder="ИМЯ" required>
+          <input class="form-input tel-input" type="tel" id="-number-id" name="tel-number" placeholder="ТЕЛЕФОН" required>
+          <input class="form-input email-input" type="email" id="-email-id" name="email" placeholder="E-MAIL" required>
+        </div>
+        <div class="user-message">
+          <textarea class="form-input" form="feedback-form" name="message-textarea" id="message-textarea-id" placeholder="СООБЩЕНИЕ" required></textarea>
+        </div>
+        <div class="user-submit">
+          <p class="user-submit-phrase">
+            Отправить<br>сообщение 
+          </p>
+          <button type="submit"></button>
+        </div>
+      </form>
+    </div>
+  </footer>  
+  
+  <div class="page-bottom">
+    <div class="wrapper">
+       <div class="bottom-cont">
+        <div class="social-links">
+          <a href="#" class="social-link link1"></a>
+          <a href="#" class="social-link link2"></a>
+          <a href="#" class="social-link link3"></a>
+          <a href="#" class="social-link link4"></a>
+        </div>
+        <p class="copyright">Copyright &copy; 2016 Scandic. Все права защищены</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
