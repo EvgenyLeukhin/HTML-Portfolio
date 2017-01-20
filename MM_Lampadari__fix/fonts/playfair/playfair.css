@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display'), local('PlayfairDisplay-Regular'), url('playfairdisplay.woff2') format('woff2'), url('playfairdisplay.woff') format('woff'), url('playfairdisplay.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url('playfairdisplayitalic.woff2') format('woff2'), url('playfairdisplayitalic.woff') format('woff'), url('playfairdisplayitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url('playfairdisplaybold.woff2') format('woff2'), url('playfairdisplaybold.woff') format('woff'), url('playfairdisplaybold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Bold Italic'), local('PlayfairDisplay-BoldItalic'), url('playfairdisplaybolditalic.woff2') format('woff2'), url('playfairdisplaybolditalic.woff') format('woff'), url('playfairdisplaybolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Black'), local('PlayfairDisplay-Black'), url('playfairdisplayblack.woff2') format('woff2'), url('playfairdisplayblack.woff') format('woff'), url('playfairdisplayblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Black Italic'), local('PlayfairDisplay-BlackItalic'), url('playfairdisplayblackitalic.woff2') format('woff2'), url('playfairdisplayblackitalic.woff') format('woff'), url('playfairdisplayblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}

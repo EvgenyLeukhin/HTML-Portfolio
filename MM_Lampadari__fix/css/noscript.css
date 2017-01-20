@@ -1,0 +1,11 @@
+.arrow {
+  display: none;
+}
+.promo-block {
+  display: block;
+}
+.slider-controls {
+    bottom: 180px;
+    z-index: 10;
+}
+
