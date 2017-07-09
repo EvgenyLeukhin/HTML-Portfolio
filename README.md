@@ -2,6 +2,8 @@
 Evgeny Leukhin Portfolio
 <br>
 Mail: EvgenyLeukhin@ya.ru
+<br>
+VK: https://vk.com/leukhin_ei
 <hr>
 <b>GutHub Hosting:</b>
 <br>
