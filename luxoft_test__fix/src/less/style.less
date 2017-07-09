@@ -1,0 +1,45 @@
+@import "normalize.less";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+@import "fonts.less";
+@import "vars.less";
+@import "mixins.less";
+
+body {
+	font-family: 'Verdana', 'Tahoma', sans-serif;
+}
+.page-wrapper {
+	min-width: 600px;
+	max-width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	margin-bottom: -80px;
+}
+.empty-block {
+	height: 80px;
+}
+.main-content {
+	font-size: 0;
+}
+.col {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	font-size: 16px;
+	min-height: 100px;
+}
+
+@import "blocks/1_page-header.less";
+@import "blocks/2_main-content.less";
+@import "blocks/6_page-footer.less";
+

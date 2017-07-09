@@ -1,0 +1,143 @@
+@keyframes moving-film {
+	from {
+		background-position: left, right 60px;
+	}
+	to {
+		background-position: left, left 60px;
+	}
+}
+.page-header {
+	min-height: 250px;
+	position: relative;
+	z-index: 90;
+	background-image: url("../img/bg-page-header.png"),
+	url("../img/film.png");
+	background-repeat: no-repeat, repeat-x;
+	background-position: left, right 60px;
+	animation-name: moving-film;
+	animation-direction: reverse;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	.main-menu {
+		margin: 0;
+		margin-top: 25px;
+		padding: 0;
+		list-style: none;
+		float: right;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			a {
+				text-decoration: none;
+				position: relative;
+				text-transform: capitalize;
+				z-index: 100;
+				color: #000;
+				display: block;
+				margin-right: 5px;
+				padding: 12px 10px;
+				font-size: 10px;
+				background-color: #c2c2c2;
+				color: inherit;
+				font-family: inherit;
+				font-weight: bold;
+				border-radius: 10px 10px 0 0;
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+					top: -5px;
+					padding-bottom: 17px;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 110;
+					display: block;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 16px;
+					width: auto;
+					border-radius: 20px;
+					background-color: #fff;
+					opacity: .2;
+				}
+				&.active {
+					background-color: #8cc8f4;
+
+				}
+			}
+		}
+	}
+	.brand {
+		position: absolute;
+		z-index: 110;
+		top: 128px;
+		left: 0;
+		width: 205px;
+		height: 45px;
+		background-color: #fff;
+		border-radius: 0 10px 10px 0;
+		box-shadow: 3px 3px 0 0 #000;
+		a {
+			text-decoration: none;
+			h1 {
+				padding: 0;
+				margin: 0;
+				font-size: 20px;
+				color: #000;
+				b {
+					font-weight: normal;
+					color: #ff9900;
+				}
+			}
+			span {
+				color: #666666;
+				font-size: 10px;
+				font-weight: bold;
+				font-family: 'Tahoma', sans-serif;
+			}
+		}
+	}
+	.shop-links {
+		position: absolute;
+		z-index: 120;
+		top: 88px;
+		right: 0;
+		display: block;
+		padding-left: 5px;
+		margin: 0;
+		list-style: none;
+		min-height: 16px;
+		background-color: #fff;
+		color: #cc0000;
+		border-radius: 10px 0 0 10px;
+		box-shadow: -3px 3px 0 0 #000;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 0;
+			margin-left: 5px;
+			white-space: nowrap;
+			a {
+				text-decoration: none;
+				text-transform: capitalize;
+				color: #cc0000;
+				text-align: right;
+				font-size: 9px;
+				line-height: 20px;
+				color: inherit;
+				padding: 5px;
+				font-family: "Verdana Bold", sans-serif;
+				font-weight: bold;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
