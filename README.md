@@ -25,8 +25,6 @@ Lessons homework
 <br>
 [Constanta] [https://evgenyleukhin.github.io/Portfolio/Other/Constanta]
 <br>
-[Constanta] [https://evgenyleukhin.github.io/Portfolio/Other/Constanta]
-<br>
 [Nintendo] [https://evgenyleukhin.github.io/Portfolio/Other/Nintendo]
 <br>
 [Products] [https://evgenyleukhin.github.io/Portfolio/Other/Products]
