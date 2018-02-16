@@ -1,0 +1,52 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: @base-font;
+}
+section {
+  min-width: @desktop-width;
+}
+
+.wrapper {
+  // .line(red);
+  .clearfix;
+  width: @desktop-width;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin: 0 auto;
+  min-height: 10px;
+}
+.btn {
+  color: #fff;
+  display: inline-block;
+  height: 55px;
+  border-radius: 4px;
+  background-color: #ff8b00;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 55px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  &:hover {
+    filter: brightness(115%);
+  }
+}
+
+// blocks 
+@import "blocks/1__header";
+@import "blocks/2__top-slider";
+@import "blocks/3__link-block";
+@import "blocks/4__prices";
+@import "blocks/5__features";
+@import "blocks/6__video";
+@import "blocks/7__contacts";
+@import "blocks/8__footer";

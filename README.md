@@ -16,3 +16,5 @@ VK: https://vk.com/leukhin_ei
 [Scandic__adap] [https://evgenyleukhin.github.io/Portfolio/Scandic__adap]
 <br>
 [Luxoft_test__fix] [https://evgenyleukhin.github.io/Portfolio/luxoft_test__fix/dist]
+<br>
+[purweb_test] [https://evgenyleukhin.github.io/Portfolio/purweb_test]

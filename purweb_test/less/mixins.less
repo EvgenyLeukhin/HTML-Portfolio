@@ -1,0 +1,49 @@
+// МИКСИНЫ в LESS объявляются без слова @mixin как в SCSS, а скобочками
+// .clearfix();
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// inherit
+.inh() {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+// reset
+.reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// outline
+.line(@line-color) {
+  outline: 1px solid @line-color;
+}
+
+// border
+.border(@bw, @bc) {
+  outline: ~"@{bw}px" solid @bc;
+}
+
+// font-size, line-height
+.fz(@fz, @lh) {
+  font-size: @fz;
+  line-height: @lh;
+}
+
+
+
+// .wrapper() {
+//   @include clearfix();
+//   width: @base-width;
+//   margin: 0 auto;
+//   padding: 0 15px;
+//   min-height: 10px;
+// }

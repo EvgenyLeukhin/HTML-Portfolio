@@ -1,0 +1,105 @@
+@import "../plugins/jquery.bxslider.less";
+
+.top-slider {
+  background-color: #5f49ce;
+  // .line(red);
+}
+.bxslider {
+  .reset;
+}
+
+.bx-content {
+  .clearfix;
+  color: #fff;
+  .col-l {
+    // .line(#fff);
+    margin-top: 0;
+    float: left;
+    width: 670px;
+    // background: pink;
+  }
+  .col-r {
+    width: 300px;
+    // .line(#fff);
+    float: left;
+    svg {
+      fill: #fff;
+      margin-top: 43px;
+      margin-left: 60px;
+    }
+  }
+  &__title {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-right: 200px;
+    padding-left: 4px;
+    letter-spacing: 0.2px;
+    margin-bottom: 44px;
+  }
+}
+
+.bx-wrapper {
+  // min-height: 430px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  margin-bottom: 42px;
+  padding-top: 102px;
+  padding-left: 80px;
+  // overflow: hidden;
+}
+.bx-wrapper .bx-pager {
+  position: absolute;
+  width: 19px;
+  height: 130px;
+  top: 181px;
+  right: -170px;
+}
+.bx-wrapper .bx-pager-item {
+  display: block;
+  margin-bottom: 14px;
+}
+.bx-wrapper .bx-pager a {
+  border: solid #ccc 1px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  margin: 0;
+  border-radius: 0;
+  width: 20px;
+  height: 23px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url(../img/slider-dot.png);
+  background-position: 1px 2px;
+  border: none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a:active,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  border: none;
+  background: none;
+  background-image: url(../img/slider-dot-active.png);
+}
+
+@media screen and (max-width: 1600px) {
+  .bx-wrapper .bx-pager {
+    right: 15px;
+  }
+}

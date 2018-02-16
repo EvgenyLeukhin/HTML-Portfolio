@@ -1,0 +1,57 @@
+.page-header {
+  min-width: @desktop-width;
+  background-color: #5f49ce;
+  padding-top: 32px;
+  &__logo {
+    // .line(#fff);
+    display: block;
+    float: left;
+    width: 78px;
+    height: 100px;
+    // margin-top: 0;
+  }
+
+  &__menu {
+    float: right;
+    min-width: 568px;
+    margin-top: 38px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      .reset;
+      // .line(#fff);
+    }
+    a {
+      // .line(#fff);
+      position: relative;
+      display: block;
+      color: #fff;
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 38px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      text-decoration: none;
+      &:hover {
+        color: #ff8b00;
+      }
+      &.active {
+        cursor: default;
+        &:hover {
+          color: #fff;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 3px;
+          background-color: #ff8b00;
+          right: -5px;
+          bottom: 2px;
+          left: -5px;
+        }
+      }
+    }
+  }
+}

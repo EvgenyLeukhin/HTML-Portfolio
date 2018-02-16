@@ -1,0 +1,79 @@
+.features {
+  background-color: #f8f8f8;
+  min-height: 1200px;
+  .inner {
+    width: 920px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    // .line(green);
+    color: #7050e5;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  h2 {
+    font-family: "Proxima Nova";
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 68px;
+    text-align: right;
+    position: relative;
+    margin: 0;
+    margin-bottom: 55px;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #ff8b00;
+      top: -29px;
+      right: -53px;
+    }
+    &::before {
+      width: 46px;
+      height: 12px;
+
+    }
+    &::after {
+      height: 46px;
+      width: 12px;
+    }
+  }
+
+
+  &__list {
+    .reset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      // .line(red);
+      width: 270px;
+      background-image: url(../img/sprite.png);
+      background-repeat: no-repeat;
+      padding-top: 170px;
+      h3 {
+        color: #7050e5;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-top: 17px;
+        margin-bottom: 4px;
+      }
+      p {
+        margin: 0;
+        color: #878787;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      &:nth-child(1) { background-position: 46px 13px; }
+      &:nth-child(2) { background-position: -234px 9px; }
+      &:nth-child(3) { background-position: -555px 7px; }
+      &:nth-child(4) { background-position: -874px 17px; }
+      &:nth-child(5) { background-position: -1146px 21px; }
+      &:nth-child(6) { background-position: -1473px 37px; }
+    }
+  }
+}
