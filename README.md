@@ -18,3 +18,19 @@ VK: https://vk.com/leukhin_ei
 [Luxoft_test__fix] [https://evgenyleukhin.github.io/Portfolio/luxoft_test__fix/dist]
 <br>
 [purweb_test] [https://evgenyleukhin.github.io/Portfolio/purweb_test]
+<hr>
+Lessons homework
+<br>
+[cat-or-dogs] [https://evgenyleukhin.github.io/Portfolio/Other/cat-or-dogs]
+<br>
+[Constanta] [https://evgenyleukhin.github.io/Portfolio/Other/Constanta]
+<br>
+[Constanta] [https://evgenyleukhin.github.io/Portfolio/Other/Constanta]
+<br>
+[Nintendo] [https://evgenyleukhin.github.io/Portfolio/Other/Nintendo]
+<br>
+[Products] [https://evgenyleukhin.github.io/Portfolio/Other/Products]
+<br>
+[Sushi] [https://evgenyleukhin.github.io/Portfolio/Other/Sushi]
+<br>
+[Vizit-card] [https://evgenyleukhin.github.io/Portfolio/Other/Vizit-card]
