@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Константа</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--для IE-->
+	<meta name="keywords" content="Электромонтажные работы, Константа, Константа Омск">
+	<meta name="description" content="Электромонтажные работы в Омске">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link href="http://allfont.net/allfont.css?fonts=ubuntu-light" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="main-header">
+			<a href="index.html" title="На главную">
+				<img class="main-header__logo" src="img/logo.png" width="150" height="40" alt="logo">
+			</a>
+			<p class="main-header__contacts">
+				+7 983 563 93 84 <br>
+				constanta.mini@gmail.com
+			</p>
+
+			<nav class="main-header__main-nav">
+				<ul class="main-menu">
+					<li><a class="active" href="#">Главная</a></li>
+					<li><a href="#">Прайс-лист</a></li>
+				</ul>
+			</nav>
+
+			<img class="main-header__banner" src="img/banner.png" alt="banner">
+		</header>
+
+		<section class="calculation">
+			<h2 class="calculation__title">Расчет стоимости электромонтажных работ</h2>
+			<div class="calculation__cont">
+				<form oninput="metr.value=(range_id.value)" action="#">
+
+					<div class="col col1">			
+						  <input id="range_id" type="range" min="0" max="200" value="0" step="1"><br>
+							<output name="metr">0</output>
+							<span class="number5">5</span>
+							<span class="number200">200</span>
+					</div>
+
+					<div class="col col2">
+						<div class="col2-item">
+							<label for="metr_id">Площадь вашего помещения:</label>
+							<span class="result">0 <span>м<sup>2</sup></span></span>	<!--Реализуется на JS-->
+						</div>
+						
+						<div class="col2-item">
+							<label for="price_id">Стоимость работ от:</label>
+							<span class="result" id="price_id">000000 <span>₽</span></span> 			<!--Реализуется на JS-->
+						</div> 
+					</div>
+
+					<input type="submit" value="Заказать">
+
+				</form>
+			</div>
+		</section>
+
+		<ul class="features">
+			<li class="features__item">
+				<img src="img/star.png" alt="features__item" width="68" height="65">
+				<h2>Качественно</h2>
+				<p>Современная компания, выполняющая качественный электромонтаж.</p>
+			</li>
+			<li class="features__item">
+				<img src="img/clock.png" alt="features__item" width="68" height="65">
+				<h2>Скорость</h2>
+				<p>Услуги электромонтажа со сроком от 1 дня!</p>
+			</li>
+			<li class="features__item">
+				<img src="img/cash.png" alt="features__item" width="68" height="65">
+				<h2>Цена</h2>
+				<p>Предоставляем полную гарантию на работы от фирмы по цене частников!</p>
+			</li>
+		</ul>
+
+		<section class="discription">
+			<h2 class="discription__title">Выполняем все виды электромонтажных работ</h2>
+			<p class="discription__text">За многолетний период на предприятии сформировалась команда опытных и квалифицированных сотрудников, оперативно справляющихся как с заменой проводки, так и с установкой сложного технического оснащения. Применяя в работе полученные на практике знания, используя современные инструменты и оборудование, умелые мастера выполняют:</p>
+			<ul class="discription__list">
+				<li>электромонтаж любой сложности и объема;</li>
+				<li>подключение к электросети помещений различного назначения;</li>
+				<li>проектирование, монтаж, наладку и лабораторные испытания электросетей;</li>
+				<li>оформление договоров и лицевых счетов в организациях энергоснабжения</li>
+			</ul>
+			<a href="#" class="discription__link">Прайс-лист</a>
+		</section>
+
+		<ul class="promo">
+			<li class="promo__item">
+				<img src="img/promo-item1.jpg" alt="promo__item1" width="291" height="186">
+				<div class="hover-mask"></div>
+			</li>
+			<li class="promo__item">
+				<img src="img/promo-item1.jpg" alt="promo__item1" width="291" height="186">
+			</li>
+			<li class="promo__item">
+				<img src="img/promo-item3.jpg" alt="promo__item3" width="291" height="186">
+			</li>
+			<li class="promo__item">
+				<img src="img/promo-item4.jpg" alt="promo__item4" width="291" height="186">
+			</li>
+		</ul>
+		
+
+	</div>
+</body>
+</html>

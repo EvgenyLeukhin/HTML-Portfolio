@@ -1,0 +1,103 @@
+/*@font-face {
+    font-family: "AshleyCapitaliSofia";
+    src: local("AshleyCapitaliSofia"), 
+	url("fonts/ashley/ashleycapitalisofia.woff2") format("woff2"), 
+	url("fonts/ashley/ashleycapitalisofia.woff") format("woff"), 
+	url("fonts/ashley/ashleycapitalisofia.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+	
+    font-family: "Amerika Pro";
+    src: local("Amerika Pro"), 
+	url("fonts/amerpro/amerikapro.woff2") format("woff2"), 
+	url("fonts/amerpro/amerikapro.woff") format("woff"), 
+	url("fonts/amerpro/amerikapro.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}																ПОЧЕМУ-то не ставяться*/
+
+html, body {
+    margin: 0;
+	padding: 0;
+	font-family: Tahoma, Arial, sans-serif;
+	/*font-family: "AshleyCapitaliSofia, Amerika Pro"; 			ХЗ */
+	} 
+
+body > header {
+    background-image: linear-gradient(to top, rgb(213,241,253), rgb(189,234,255));
+	background-repeat: repeat; 
+}
+
+.main {
+	background: url(../images/main-background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	
+    /*background-image: linear-gradient(#FAF7A4, #E3B189, #93A9FD);*/
+}
+.left-column {
+    float: left;
+    min-height: 330px;
+    width: 180px;
+    outline: 0px dotted #999; 
+}
+
+.right-column {
+    min-height: 850px;
+    margin-left: 200px;
+    outline: 0px dotted #999; 
+	padding: 10px;
+	outline: 0px dotted #999;
+}
+
+footer {
+	padding: 12px 0px;
+	background: url(../images/footer-bg.png);
+	
+}
+/*ХЗ почему не работает?! :'(*/
+
+/*псевдораспорка*/
+.clearfix:after{	
+	content:"";
+	display:table;
+	clear:both;
+}
+/*центровщик*/
+.layout-positioner{					
+    outline:0px dashed orange;
+    max-width: 1100px;                      
+	margin: 0 auto;
+}
+.info {
+	float: left;
+	width: 200px;
+}
+.copyright {
+	clear: left;
+	width: 200px;
+} 
+
+.rus-flag {
+	float: right;
+	height: 24px;
+	width: 24px;
+	margin: 5px 20px 5px 5px;
+}
+
+@media (max-width:430px){
+	.right-column {
+		margin: 0px;
+		clear: left;
+		}
+}
+	
+@media (max-width:500px){
+.right-column td, .right-column th, .right-column .paginator a{
+	padding: 0px;
+	}
+}
+

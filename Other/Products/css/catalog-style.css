@@ -1,0 +1,159 @@
+.main-content .catalog {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.catalog .catalog-item {
+	display: block;
+	float: left;
+	min-height: 250px;
+	width: 250px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+    border: 2px solid #f9d006;
+}
+
+.main-content h2 {
+	font-family: "Red October";
+	font-size: 1.3em;
+	background-color: #d1060a;
+	color: white;
+	width: 360px;
+	padding: 5px;
+	margin: 0 auto;
+	margin-top: 10px;
+    text-align: center;
+}
+
+.catalog .catalog-title {
+	font-size: 0.9em;
+	padding: 0;
+	margin: 0;
+	border-bottom: 5px solid #f9d006;
+	font-family: Arial black;
+}
+
+.catalog-item .catalog-img {
+    display: block; 
+    margin: 0px auto;
+}
+
+.catalog-item > a {
+    display: block;
+    margin: 10px auto;
+    height: 150px;
+    width: 200px; 
+    
+}
+
+.catalog-item > a:hover {
+    transform: scale(1.1); 
+    transition-duration: 1s; 
+}
+
+.catalog-item .catalog-description {
+	float: right;
+    margin: 0;
+    padding: 0;
+	text-decoration: none;
+	font-style: italic;
+	color: #ccc;
+}
+
+.catalog-item .catalog-description a {
+	text-decoration: none;
+	color: #656d78;
+}
+
+.catalog-item .catalog-price {
+	font-family: 'Red October';
+	clear: right;
+	float: right;
+    margin: 0;
+    padding: 0;
+	background-color: black;
+	color: white;
+	font-style: bold;
+	font-size: 1.3em;
+	padding: 5px 10px;
+	margin-top: 10px;
+	outline: 1px solid black;
+}
+
+.catalog-item .catalog-basket {
+	height: 40px;
+	width: 100px;
+	float: left;
+	margin-top: 7px;
+	background-image: url(../img/basket.gif);
+	background-repeat: no-repeat;
+	background-size: 33%;
+	padding-left: 30px;
+}
+
+.catalog-basket .basket-text {
+	vertical-align: bottom;
+	line-height: 40px;
+}
+
+.catalog-basket .basket-text a {
+	text-decoration: none;
+	display: block;
+	font-size: 0.9em;
+	font-weight: bold; 
+	font-family: Arial black;
+	color: black;
+	text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+
+.catalog-item .catalog-description a:hover {
+	text-decoration: underline;
+}
+
+.description-list > li:nth-child(2) {
+	text-align: justify;
+}
+table {
+	text-align: center;
+	border-collapse: collapse;
+	margin-left: 25px;
+}
+
+table caption {
+	font-weight: bold;
+}
+
+table th {
+	border: 1px solid black;
+	padding: 5px;
+}
+table td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+@media (max-width: 1175px) {
+	.catalog {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 10px auto;
+	}
+}
+
+/*
+.catalog .catalog-item {
+    position: relative;
+}
+
+.catalog-item .catalog-img {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+    outline: 2px solid deeppink;  
+}

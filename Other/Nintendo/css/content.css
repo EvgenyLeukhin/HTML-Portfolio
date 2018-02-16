@@ -1,0 +1,397 @@
+.content-box {               	/*ОФОРМЛЯЕМ КОНТЕЙНЕР*/
+    position: relative;     /*ЧТОБЫ ПОЗИЦИОНИРОВАТЬ КАРТИНКУ*/
+    max-width: 700px;
+    min-height: 80px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+	padding-left: 200px;
+	padding-right: 50px;
+	background-image: linear-gradient(#9ad58f, #6da363); 
+	opacity: 0.9;
+}
+.content-box:hover {
+	-webkit-filter: saturate(1.8);
+}
+
+.content-logo {                    /*КАРТИНКА*/
+    position: absolute;     /*ЗАДАЁМ КООРДИНАТЫ*/
+    width: 171px;
+    height: 75px;
+    border: 3px solid #e5e5e5;
+    border-radius: 4px;
+    left: 7px;
+	top: 12px;
+	}
+	
+.logo-jnes {
+	background-image: url(../images/jnes-logo.png);
+}
+
+.logo-fceux {
+	background-image: url(../images/fceux-logo.png);
+}
+
+.logo-virtuanes {
+	background-image: url(../images/virtuanes-logo.png);
+}
+
+.logo-ai2 {
+	background-image: url(../images/ai-logo.png); 
+}
+
+.logo-mario {
+	background-image: url(../images/mario-logo.png); 
+}
+
+.logo-battle-city {
+	background-image: url(../images/battle-city-logo.png); 
+}	
+
+.logo-contra {
+	background-image: url(../images/contra-logo.png); 
+}
+
+.logo-kung-fu {
+	background-image: url(../images/kung-fu-logo.png); 
+}
+
+.logo-lode-runner {
+	background-image: url(../images/lode-runner-logo.png); 
+}
+
+.logo-bomberman {
+	background-image: url(../images/bomberman-logo.png); 
+}
+
+.logo-tetris {
+	background-image: url(../images/tetris-logo.png); 
+}
+
+.logo-arkanoid {
+	background-image: url(../images/arkanoid-logo.png); 
+}
+
+.logo-pac-man {
+	background-image: url(../images/pac-man-logo.png); 
+}
+.logo-popeye {
+    background-image: url(../images/logo-popeye.png);
+}
+
+.logo-ice-climber {
+	background-image: url(../images/ice-climber-logo.png); 
+}
+
+.logo-road-fighter {
+	background-image: url(../images/logo-road-fighter.png); 
+}
+
+.logo-galaxian {
+	background-image: url(../images/galaxian-logo.png); 
+}
+
+.logo-tennis {
+	background-image: url(../images/logo-tennis.png); 
+}
+
+.logo-battletoads {
+	background-image: url(../images/logo-Battletoads.png);	
+}
+
+.logo-Battletoads_and_DD {
+	background-image: url(../images/logo-battletoads_dd.png);	
+}
+
+.logo-castlevania {
+	background-image: url(../images/logo-Castlevania.png);	
+}
+
+.logo-chip-and-dale {
+	background-image: url(../images/logo-chip-and-dale.png);	
+}
+
+.logo-chip-and-dale2 {
+	background-image: url(../images/logo-chip-and-dale2.png);	
+}
+
+.logo-galaga {
+	background-image: url(../images/galaga-logo.png);	
+}
+
+.logo-darkwing-duck {
+	background-image: url(../images/logo-darkwing-duck.png);	
+}
+
+.logo-duck-tales {
+	background-image: url(../images/logo-duck-tales.png);	
+}
+
+.logo-duck-tales2 {
+	background-image: url(../images/logo-duck-tales2.png);	
+}
+
+.logo-felix {
+	background-image: url(../images/logo-felix.png);	
+}
+
+.logo-guerrilla-war {
+	background-image: url(../images/logo-guerrilla-war.png);	
+}
+
+.logo-metal-gear {
+	background-image: url(../images/logo-metal-gear.png);	
+}
+
+.logo-robocop3 {
+	background-image: url(../images/logo-robocop3.png);	
+}
+
+.logo-rockin-cats {
+	background-image: url(../images/logo-rockin-cats.png);	
+}
+
+.logo-terminator2 {
+	background-image: url(../images/logo-terminator2.png);	
+}
+
+.logo-tom-and-jerry {
+    background-image: url(../images/logo-tom-and-jerry.png);	
+}
+
+.logo-turtles2 {
+    background-image: url(../images/logo-turtles2.png);	
+}
+
+.logo-turtles3 {
+    background-image: url(../images/logo-turtles3.png);	
+}
+
+.logo-turtles-tournament {
+    background-image: url(../images/logo-turtles-tournament.png);
+}
+
+.logo-noid{
+    background-image: url(../images/logo-noid.png);
+}
+
+.logo-zen{
+    background-image: url(../images/logo-zen.png);
+}
+
+table {
+	border: 1px solid black;
+	margin-left: 100px;
+	border: none;
+	border-spacing: 7px;
+}
+table caption {
+	font-size: 25pt;
+	background-color: #61aa4e;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	border: 2px solid black;
+	border-radius: 4px;
+	font:bold 60px arial;
+	text-align:center;
+	color:#FFFFFF;
+	text-shadow:0 1px 0 #999999, 
+			0 2px 0 #888888, 
+			0 3px 0 #777777, 
+			0 4px 0 #666666, 
+			0 5px 0 #555555, 
+			0 6px 0 #444444, 
+			0 7px 0 #333333, 
+			0 8px 7px #000B21;
+	margin-bottom: 5px;
+}
+th {
+	border: 1px solid black;
+	border-bottom: 2px solid black;
+	border-radius: 4px;
+	text-align: center;
+	height: 2em;
+	padding: 10px;
+	background-image: linear-gradient(#9ad58f, #6da363); 
+	}
+td {	
+	border: 1px solid black;
+    border-radius: 4px;
+	padding: 15px;
+	background-image: linear-gradient(#9ad58f, #6da363); 
+	opacity: 0.9;
+	box-shadow: 1px 1px 0px 1px #34495e;
+}		
+
+td:nth-child(3):hover {
+	opacity: 1.0;
+	-webkit-filter: saturate(1.5);
+}
+
+td a {
+	color: black;
+	text-decoration: none;	
+}
+
+.paginator {                            /*КОНТЕЙНЕР ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ*/
+    padding: 10px;
+    white-space: nowrap;                /*ЧТОБЫ ТЕКСТ ВНУТРИ ЭТОГО КОНТЕЙНЕРА БЫЛ ОДНОЙ СТРОКОЙ*/
+	margin-top: 5px;
+	text-align: center;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+.paginator a {   
+    display: inline-block;               /*ДЕЛАЕМ ССЫЛКИ СО СПАНОМ С-Б, ЗАДАЁМ ВЫСОТУ, МИН-ШИРИНУ, ЧТОБЫ ТЯНУЛИСЬ ОТСТУПЫ, ФОН И ЦЕНТРУЕМ*/
+    height: 40px;
+    min-width: 20px;
+    padding: 0 10px;
+    line-height: 40px;                  /*ДЛЯ ЦЕНТРОВКИ УКАЗЫВАЕМ ВЫСОТУ СТРОКИ РАВНУЮ ВЫСОТЕ ЭЛЕМЕНТОВ*/
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.paginator .current {
+	background: #3bafda;
+	-webkit-filter: saturate(3);
+	
+}
+
+.paginator .next, .paginator .prev {
+	background: #4fc1e9;
+}
+
+.paginator .next:hover, .paginator .prev:hover {
+	background: #3bafda;
+	
+}
+
+.content-title {                /*ОФОРМЛЕНИЕ ПЕРВОЙ СТРОКИ*/
+    margin-bottom: 3px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.content-description {          /*ОФОРМЛЕНИЕ ВТОРОЙ СТРОКИ*/
+    font-size: 1.0em;
+    color: #840;
+}
+.content-download {
+	padding: 5px 0px;
+}
+.content-download  a{
+	color: #e7195a;
+	font-size: 1.2em;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.content-download a:hover{
+	cursor: pointer;
+}
+.content-download a:active{
+	color: #FA0EFF;
+}
+
+@media (max-width:640px){
+.paginator {                                         
+	margin-left: 0px;
+	padding: 0px;
+	}
+table {
+	margin-left: 0px;	
+	}
+}
+
+@media (max-width:600px){
+.content-box,
+.content-logo, 
+.content-title, 
+.content-description , 
+.content-download {                    
+    position: static;     
+	display: block;
+	padding: 0px;
+	}
+}
+
+h2 {
+margin-top: 0px;
+margin-bottom: 10px;
+border: 2px solid black;
+border-radius: 4px;
+font:bold 60px arial;
+text-align:center;
+background-image: linear-gradient(#515252, #3c483d); 
+color:#FFFFFF;
+text-shadow:0 1px 0 #999999, 
+			0 2px 0 #888888, 
+			0 3px 0 #777777, 
+			0 4px 0 #666666, 
+			0 5px 0 #555555, 
+			0 6px 0 #444444, 
+			0 7px 0 #333333, 
+			0 8px 7px #000B21;
+}
+
+.music-list-box  {
+	outline: 0px solid blue;
+}
+
+.music-item {
+	border: 1px solid black;
+	background-image: linear-gradient(#9ad58f, #6da363); 
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 12px;
+	opacity: 0.9;
+	position: relative;
+}
+
+.music-name {
+	display: inline-block;
+	color: white;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	outline: 0px solid green;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.music-file {
+	display: inline-block;
+	outline: 0px solid blue;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+@media (max-width:565px){
+.music-item ,
+.music-name,
+.music-file  {
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+}
+
+.clearfix:after{			/*ПСЕВДО-РАСПОРКА*/
+	content:'';
+	display:table;
+	clear:both;
+		}
+
+
+.music-item .music-download {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	text-align: right;
+	right:7px;
+	bottom: 10px;
+}

@@ -1,0 +1,215 @@
+body { /*0-ой уровень ширина 100%(стоит по умолчанию)*/
+	background-color: #9B59B6;
+	font-family: Tahoma;
+	color: white;
+}
+
+.header { /*1-ый уровень ширина 100%(стоит по умолчанию),цвет фона как у body*/
+	margin-top: -8px;
+}
+
+
+.menu {	/*2-ый уровень ширина и высота задаётся в пикселях, и контейнер центруется*/
+	background-color: #2C3E50;
+	margin: 0px auto;
+	height: 100px;
+	width: 1250px;
+	border-radius: 5px;
+}
+
+.logo {
+	float: left;
+	width: 300px;
+	height: 58px;
+	background-color: #2C3E50;
+	font-size: 2em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px black;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 20px;
+	border: 2px solid #95A5A6;
+	border-radius: 5px;
+	padding-top: 20px;
+}
+
+.small-box {
+	float: right;
+	width: 100px;
+	height: 35px;
+	border: 2px solid #95A5A6;
+	border-radius: 5px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	background-color: #9B59B6;
+	margin-top: 15px;
+	margin-right: 25px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 1em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px black;
+	padding-top: 15px;
+}
+
+.small-box:hover, .cat-text:hover, .dog-text:hover {
+	background-color: #8E44AD;
+	cursor: pointer;
+	color: gold;
+	border: 2px solid gold;
+}
+
+.logo:hover{
+	cursor: pointer;
+	color: gold;
+	border: 2px solid gold;
+}
+
+.search {
+	float: right;
+	width: 250px;
+	height: 20px;
+	margin-top: 5px;
+	margin-right: 7px;
+	
+}
+input {	
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	background-color: #95A5A6;
+	border: 2px solid #95A5A6;
+	border-radius: 5px;
+}
+
+.submit-search {
+	margin-left: 6px;
+	background-color: #8E44AD;
+	color: white;
+}
+
+.submit-search:hover {
+	cursor: pointer;
+	color: gold;
+	border: 2px solid gold;	
+}
+.small-box:active, .logo:active, .submit-search:active, .cat-text:active, .dog-text:active {
+	background-color: #95A5A6;
+}
+
+.lang {
+	float: left;
+	margin-top: 5px;
+	margin-left: 7px;
+}
+
+.lang img {
+	width: 20px;
+	height: 20px;
+}
+
+.flag {
+	float: left;
+	margin-right: 3px;
+}
+
+.eng, .rus, .deu, .fra, .esp {
+	float: left;
+	margin-left: 15px;
+}
+
+.eng:hover, .rus:hover, .deu:hover, .fra:hover, .esp:hover {
+	cursor: pointer;
+	color: gold;
+}
+
+.eng:active, .rus:active, .deu:active, .fra:active, .esp:active {
+	color: #95A5A6;
+}
+
+.body2 {
+	margin-top: 5px;
+}
+
+.cont {
+	background-color: #2C3E50;
+	margin: 0px auto;
+	height: 420px;
+	width: 1250px;
+	border-radius: 5px;
+}
+
+.answer {
+	background-color: #2C3E50;
+	margin: 0px auto;
+	height: 75px;
+	line-height: 75px;
+	width: 1250px;
+	border-radius: 5px;
+	font-size: 2.5em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px black;
+	text-align: center;
+}
+
+.cat-cont {
+	width: 400px;
+	height: 330px;
+	float: left;
+}
+.dog-cont {
+	width: 400px;
+	height: 330px;
+	float: right;
+}
+
+.cat{
+	margin-top: 10px;
+	margin-left: 75px;
+}
+
+.dog {
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.cat img {
+	width: 250px;
+	height: 250px;
+	
+}
+
+.dog img {
+	width: 200px;
+	height: 250px;
+}
+
+.cat-text {
+	float: left;
+	border: 2px solid #95A5A6;
+	background-color: #9B59B6;
+	margin-left: 25px;
+	height: 50px;
+	line-height: 50px;
+	width: 350px;
+	border-radius: 5px;
+	font-size: 2em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px black;
+	text-align: center;
+}
+.dog-text {
+	float: right;
+	border: 2px solid #95A5A6;
+	background-color: #9B59B6;
+	margin-right: 25px;
+	height: 50px;
+	line-height: 50px;
+	width: 350px;
+	border-radius: 5px;
+	font-size: 2em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px black;
+	text-align: center;
+}
+
+ .cat img:hover, .dog img:hover {
+ 	cursor: pointer;
+}

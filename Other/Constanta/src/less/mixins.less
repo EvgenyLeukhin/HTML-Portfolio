@@ -1,0 +1,23 @@
+.clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.link-styles-off() {
+	border: none;
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+}
+.line() {
+	outline: 2px solid red;
+}
+.list() {
+	list-style: none;
+}
+.fz(@fz; @lh) {
+    font-size: @fz;
+    line-height: @lh;
+}

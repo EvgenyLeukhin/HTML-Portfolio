@@ -1,0 +1,98 @@
+/*ВЕРХНЕЕ МЕНЮ*/
+.logo {
+    float: left;
+    max-width: 400px;
+    max-height: 120px;
+    outline: 0px dotted #999;
+}
+
+.logo img {
+    width: 400px; 
+}
+
+.main-menu {        /*Убираем отступы СПИСКА, маркеры*/
+    float: right;
+    margin: 0;
+    padding: 0;      /*Центруем по высоте*/
+    list-style: none;
+	outline: 0px dotted #999;
+}
+
+.main-menu li {
+    display: inline-block; /*ЗАДАЁМ СТРОЧНО-БЛОЧНЫЙ ВИД ЭЛЕМЕНТАМ СПИСКА*/
+    margin-right: 0px;      /*Расстояние между элементами списка*/
+    white-space: nowrap;    /*ЧТОБЫ НЕ ПЕРЕНОСИЛОСЬ ВТОРОЕ СЛОВО на новую строку*/
+}
+/*ОФОРМЛЯЕМ ВЕРХНЕЕ МЕНЮ*/
+.main-menu a {              /*Cылки делаем блочными, благодаря чему управляем размерами и оформляем*/
+    display: block;
+    color: black;
+    padding: 15px;
+    margin: 60px 0px 10px 10px;
+    border: 0px solid black;
+    border-radius: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.0em;
+	background-image: linear-gradient(#55b2ea, #0090e8); 
+    box-shadow: 2px 2px 1px 0px #34495e;
+}
+.main-menu .last {
+	margin-right: 15px;
+}
+
+.main-menu a:hover {
+    box-shadow: 2px 2px 1px 1px #34495e;
+	background-image: linear-gradient(#55b2ea, #0062e8);
+}  
+.main-menu a:active {
+    box-shadow: 2px 2px 1px 2px #34495e;
+} 
+/*ВЕРТИКАЛЬНОЕ МЕНЮ*/
+.sidebar { /*Оформляем главное меню, задаём ШИРИНУ, убираем отступы и маркеры пунктов*/
+    list-style: none;
+    margin-top: 10px;
+	margin-left: 20px;
+    padding: 0;             
+}
+
+.sidebar a {            /*Оформляем ccылки ВЕРИКАЛЬНОГО меню, задаём БЛОЧНЫЙ ВИД, чтобы было удобно нажимать и красиво оформлять */
+    color: black;           /*задаём цвет, внутренние отступы и убираем подчёркивание у ссылок*/
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;   
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-size: 1.0em; 
+	background-image: linear-gradient(#fdaeff, #efc6f0);    
+    box-shadow: 2px 2px 1px 0px #34495e;	
+    opacity: 0.9;
+}
+
+.sidebar .links a:hover{        /*Оформляем поведение ccылок главного меню*/ 
+	box-shadow: 2px 2px 1px 1px #34495e;
+	background-image: linear-gradient(#fdaeff, #f07ef3);        
+}
+
+.sidebar .links a:active{
+	box-shadow: 2px 2px 1px 2px #34495e;          
+}
+
+.main-menu .active  a{
+	box-shadow: 2px 2px 1px 1px #34495e;
+	font-weight: bold;
+}
+
+.sidebar .active  a{
+	box-shadow: 2px 2px 1px 1px #34495e;
+	font-weight: bold;
+}
+
+@media (max-width:420px){
+	.logo img {
+	width: 230px;}
+}
+@media (max-width:830px){
+	.main-menu a {
+	margin: 10px 0px 10px 10px;}
+}
