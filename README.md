@@ -31,7 +31,7 @@ VK: https://vk.com/leukhin_ei
 <br>
 [purweb_test] [https://evgenyleukhin.github.io/HTML-Portfolio/purweb_test]
 <hr>
-Lessons homework
+<b>Lessons homework</b>
 <br>
 [cat-or-dogs] [https://evgenyleukhin.github.io/HTML-Portfolio/Other/cat-or-dogs]
 <br>
