@@ -5,9 +5,13 @@ Mail: EvgenyLeukhin@ya.ru
 <br>
 VK: https://vk.com/leukhin_ei
 <hr>
-<b>GTA V</b>
-<br>
-[Autorization] [https://evgenyleukhin.github.io/gta5-autorization/]
+<b>GTA V</b><br>
+[Autorization] [https://evgenyleukhin.github.io/gta5-autorization/]<br>
+[Delete-person] [https://evgenyleukhin.github.io/gta5-autorization/delete-person.html]<br>
+[Autorization-2] [https://evgenyleukhin.github.io/gta5-autorization/auth.html]<br>
+[Registration] [https://evgenyleukhin.github.io/gta5-autorization/registration.html]<br>
+[Slots] [https://evgenyleukhin.github.io/gta5-autorization/slots.html]<br>
+[Rules] [https://evgenyleukhin.github.io/gta5-autorization/rules.html]<br>
 <br>
 [User-places] [https://evgenyleukhin.github.io/gta5-html/]
 <br>
