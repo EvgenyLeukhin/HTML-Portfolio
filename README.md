@@ -5,7 +5,16 @@ Mail: EvgenyLeukhin@ya.ru
 <br>
 VK: https://vk.com/leukhin_ei
 <hr>
-<b>GutHub Hosting:</b>
+<b>GTA V</b>
+<br>
+[Autorization] [https://evgenyleukhin.github.io/gta5-autorization/]
+<br>
+[User-places] [https://evgenyleukhin.github.io/gta5-html/]
+<br>
+[Game-menu] [https://evgenyleukhin.github.io/gta5-game-menu/]
+<br>
+<hr>
+<b>Some examples:</b>
 <br>
 [Barbershop__fix] [https://evgenyleukhin.github.io/HTML-Portfolio/Barbershop__fix]
 <br>
