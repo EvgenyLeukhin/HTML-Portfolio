@@ -1,0 +1,64 @@
+body {
+  background: #222;
+}
+
+.gta-acount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat, no-repeat;
+  // background-size: 622px auto, cover;
+  background-position: right bottom, center;
+  overflow: hidden;
+  color: #fff;
+
+  &__content {
+    padding-top: 42px;
+    position: relative;
+    width: 520px;
+    min-height: 500px;
+    // outline: 1px solid #fff;
+
+    img {
+      position: absolute;
+      &.logo {
+        width: 150%;
+        left: -25%;
+        top: -165px;
+      }
+    }
+
+    header {
+      margin-bottom: 27px;
+      h2 {
+        padding-left: 95px;
+        font-size: 35px;
+        margin-bottom: 13px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        // background-image: url(../img/ico_profile.png);
+        background-image:  url('data:image/png;base64,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');
+        background-position: 36px -2px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 32px;
+        padding-left: 38px;
+      }
+    }
+  }
+}
+
+.js-person-name {
+  text-transform: capitalize;
+}
+
+
+// pages
+@import "pages/authorization";
+@import "pages/registration";
+@import "pages/delete-person";
+@import "pages/rules";
+@import "pages/slots";

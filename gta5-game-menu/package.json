@@ -1,0 +1,60 @@
+{
+  "name": "gta5-html",
+  "version": "1.0.0",
+  "description": "gta5 templates",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "gulp",
+    "develop": "gulp",
+    "build": "gulp build",
+    "server": "node server.js",
+    "build-and-serve": "npm run build && npm run server",
+    "install-packages-npm": "npm install",
+    "install-packages-yarn": "yarn install",
+    "delete-packages": "gulp delete",
+    "delete-dist": "gulp del",
+    "deploy": "gulp build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyLeukhin/gta5-html.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-sass",
+    "gulp-minimal-starter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvgenyLeukhin/gta5-html/issues"
+  },
+  "homepage": "https://github.com/EvgenyLeukhin/gta5-html#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "chalk": "^2.4.1",
+    "css-mqpacker": "^7.0.0",
+    "del": "^3.0.0",
+    "eslint": "^5.6.0",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cli": "^2.0.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-pngquant": "^6.0.0"
+  }
+}

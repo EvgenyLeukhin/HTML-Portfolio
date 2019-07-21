@@ -1,0 +1,16 @@
+@keyframes opacity {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.opacity {
+  animation-name: opacity;
+  animation-name: opacity;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+}
+
+
+@keyframes slide {
+  from { background-position-y: -1000px; }
+  to   { background-position-y: bottom; }
+}

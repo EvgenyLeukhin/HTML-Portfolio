@@ -1,0 +1,81 @@
+//= html/head.html
+
+<main class="display-area  overlay">
+  <div class="roulete-page">
+    <div class="close-btn"></div>
+
+    <div class="roulete">
+
+      <!-- для запуска рулетки нужно навесить класс  .rotate -->
+      <div id="roulete-img" class="roulete-img"></div>
+
+      <div id="roulete-mark" class="mark"></div>
+
+      <div id="roulete-output" class="output">30</div>
+    </div>
+
+    <div class="controls">
+      <form action="" method="POST">
+        <h3>Сумма ставки</h3>
+
+        <div class="bet-controls">
+          <div class="js-min">Мин.</div>
+          <div class="js-double">х2</div>
+          <div class="js-half">1/2</div>
+          <div class="js-max">Макс.</div>
+        </div>
+
+        <h3>$</h3>
+        <div class="bet-input">
+          <input
+            type="number"
+            id="bet-input-id"
+            name="bet-input"
+            min="1000"
+            step="1000"
+            value="1000">
+        </div>
+
+        <div class="bet-choose-color">
+            <!-- .active   - можно ставить -->
+            <!-- .disabled - заблокирован -->
+          <div class="red  js-bet-red  active">
+            <span class="js-bet-red__output">0</span> $
+          </div>
+          <div class="zero  js-bet-zero">
+            <span class="js-bet-zero__output">0</span> $
+          </div>
+          <div class="black  js-bet-black">
+            <span class="js-bet-black__output">0</span> $
+          </div>
+        </div>
+
+
+        <div class="bet-info">
+          <div class="balance">
+            <p>Балланс <span>1000000</span>$</p>
+            <p>Возможный выйгрыш <span>10000</span>$</p>
+          </div>
+
+          <input type="submit" value="Поставить">
+          <a href="#" class="js-bet-reset  bet-reset">Сбросить</a>
+        </div>
+      </form>
+
+      <h3>Сделанные ставки</h3>
+      <div class="all-bets">
+        <div class="red">
+          <span class="js-bet-red__output__all">0</span> $
+        </div>
+        <div class="zero">
+          <span class="js-bet-zero__output__all">0</span> $
+        </div>
+        <div class="black">
+          <span class="js-bet-black__output__all">0</span> $
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+//= html/footer.html

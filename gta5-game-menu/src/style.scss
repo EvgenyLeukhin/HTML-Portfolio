@@ -1,0 +1,11 @@
+@import "scss/reset";
+@import "scss/fonts";
+@import "scss/menu-page";
+@import "scss/roulete-page";
+@import "scss/speedometr";
+@import "scss/reports-page";
+
+.display-container {
+  display: flex;
+  min-height: 100vh;
+}

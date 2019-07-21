@@ -1,0 +1,46 @@
+// Uni Neue
+@font-face {
+  font-family: 'Uni Neue';
+  src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'),
+    url('../fonts/UniNeue/300/UniNeueLight.woff2') format('woff2'),
+    url('../fonts/UniNeue/300/UniNeueLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uni Neue';
+  src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'),
+    url('../fonts/UniNeue/400/UniNeueRegular.woff2') format('woff2'),
+    url('../fonts/UniNeue/400/UniNeueRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uni Neue';
+  src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'),
+    url('../fonts/UniNeue/700/UniNeueBold.woff2') format('woff2'),
+    url('../fonts/UniNeue/700/UniNeueBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uni Neue';
+  src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'),
+    url('../fonts/UniNeue/800/UniNeueHeavy.woff2') format('woff2'),
+    url('../fonts/UniNeue/800/UniNeueHeavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uni Neue';
+  src: local('Uni Neue'), local('Uni_Neue'), local('Uni-Neue'),
+    url('../fonts/UniNeue/900/UniNeueBlack.woff2') format('woff2'),
+    url('../fonts/UniNeue/900/UniNeueBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+

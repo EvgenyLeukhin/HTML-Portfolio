@@ -1,0 +1,380 @@
+.display-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.overlay {
+    position: relative;
+    z-index: 10;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(0,0,0, .8);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.roulete-page {
+  font-family: 'Uni Neue';
+  font-weight: 400;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  height: 570px;
+  width: 1200px;
+
+  .close-btn {
+    background-image: url(../img/cross.svg);
+    cursor: pointer;
+    position: absolute;
+    background-size: contain;
+    border-image-slice: center;
+    top: -30px;
+    right: -30px;
+    height: 15px;
+    width: 15px;
+  }
+
+  .roulete {
+    flex-basis: 50%;
+    display: flex;
+    position: relative;
+    .roulete-img {
+      flex-grow: 1;
+      background-image: url(../img/roulete.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      &.rotate {
+        // настройки анимации
+        animation-name: rulete-rotate;
+        animation-fill-mode: both;
+        animation-duration: 30s;
+        animation-delay: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+      }
+    }
+    .mark {
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      margin-left: -10px;
+      height: 30px;
+      width: 20px;
+      background-image: url(../img/romb.svg);
+      background-size: contain;
+    }
+    .output {
+      position: absolute;
+      text-align: center;
+      width: 90px;
+      height: 66px;
+      left: 50%;
+      top: 50%;
+      margin-top: -33px;
+      margin-left: -45px;
+      color: #fff;
+      line-height: 66px;
+      font-family: serif;
+      font-weight: 700;
+      font-size: 55px;
+    }
+  }
+
+  .controls {
+    padding-top: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-basis: 45%;
+    // outline: 1px solid green;
+    font-family: 'Uni Neue';
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,.5);
+    border-right: 1px solid rgba(255,255,255,.5);
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .bet-controls {
+      display: flex;
+      // align-items: center;
+      height: 35px;
+      background: #786957;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      & > div {
+        flex-basis: 25%;
+        line-height: 35px;
+        cursor: pointer;
+        transition: all .2s;
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+        &:hover {
+          background: #333;
+        }
+        &:active {
+          background: #1A1C1C;
+        }
+      }
+    }
+
+    .bet-input {
+      display: inline-flex;
+      margin-bottom: 63px;
+
+      input {
+        border: 0;
+        outline: 0;
+        box-shadow: 0;
+        display: block;
+        margin: 0 auto;
+        width: 230px;
+        height: 35px;
+        text-align: center;
+        color: #fff;
+        background: #786957;
+        font-size: 20px;
+        border-radius: 5px;
+        // padding-left: 25px;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        // margin-right: 5px;
+        display: none;
+      }
+    }
+
+    .bet-choose-color {
+      display: flex;
+      height: 35px;
+      // width: 90%;
+      margin-bottom: 10px;
+      margin: auto;
+      border-radius: 10px;
+
+      & > div {
+        flex-basis: 33.33%;
+        line-height: 35px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        transition: all .2s;
+        cursor: pointer;
+        background: #3A3A3A;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center right;
+
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &.red {
+          // background-image: url(../img/x2.png);
+          background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAvCAYAAABUiRJEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQbSURBVHgB1VqLduIgECVptQ9ra3X//wN3j63rq2qr7tx04qY4AyTBlN5zaCxE4MJlGAYz88NwPB6v6NGjlFG64uw9iih9ZFn2EVpXZn4AiHCfHveUbijlntcxEDtKaxqInevFpMkT6Tt6DM3/Ga4LkJ/RIOylwiTJs7RHlPomDpY0AAs7MznyRBzyxmz75F0XZwOQFHkiDtIPntcO5nNdv/MTuOJ04/kulsBb+U8y5AOIbyktKb0TgaNSBwYAdmJgZOVg4H6X30+CPHX6lh7PSjFmd+az3FZ9GISJkQ3lgurCIEZfV00BCR+E/BWlP3WIA2zdp0qdg/JDEuS5s0srGzM01yQeWOdKKMrZb0hm5tFZdLQ0RidptsSbkg8P0VybtDCntCHiGxMBmH2aZSjAXvvF/8nMPECdPcQiXoHk3RWGvph5to52R0SXsA4uVW8sXFMHof9fdgHl76ijU9MQ2r5N+S9U79Z0B2lpFxOQU0ewzUhWsU8dHZgG4BmXHJZ9l8S5H9LSBudTASyrJMcHSboBmCj5jZXUENrB6HPm8QeGhh4z4SWUj0wNsNw1z6rr9T4U8vZlwOMkCfaiWsnfI/cY+3YwOBYgTcK6/GCvh7byT0XuwFDJPzk+X8h75P9oHEhJ7o6+rKt9ObOEDvnf8ulLagwN3QtF3yF3GDlx6Rnr/KB5eJr8n6hy6Rg8EuqCijqVeyX8JeFMgSJ5j/yHVoMwLNKWsvwG646YgCb3s0OO6ts75D8oj4Q80pJh2fIprTNQX2CTekKRdFwu4DvYaPIfsfwlwwLV/DUdgg2cth2/agp0knfIvwwT3Qll8y7l7on9Ldh9F+E90jrkL0lMXFuXAjtfLuLOnSb0PK/Jvwp1bV0CHN/XfI9NyBYbRJ7l/+p5rTNnho/hT0pxEe01AQiO5PDa0chhcGJHYEQw8bFSXERtQ4OeweQdLmNZT63TXxNUiEv9LokHqy+IvOO0VsVt0+BHjT7AidFuYqZ1l52XPO/nExOGpsEPXx9cNzDASxN7EzLzmtxhAA9CfVHlH0B85trLXcg9DZeXfjZWHGKWtpN+LPkHEF+08StyT8NiGAiN4gP779I92iN9v9WFSCDxVn6Fa+YflYbt+zPsqdKF4Fg5/nrB39NOaECU66xcaRyylQIXa/tGRblkBDTlOFExsD3llVj3eOfkWW6S26i6rw75n46/NdAJcSBXGtcadm0nmvyfQ+VP72Gn6IQ4kFuNuwJ/TqvqkD/aGBsPmPidUhydOJBVGoc8pVmv5TZSPahDkvpci+4E/B7nEgemVfWWNjjw5wHkj4tPe0nB+9vYdTmirVVE9xoJ12UHG8vdhkf+zyYh5OzFSWutcXDCYf17HGhMApiNe6WsbSwO8pe+b7u+jX5wFAH7f+qP2BTHArLTAAAAAElFTkSuQmCC');
+
+          &:hover {
+            background-color: rgba(218,61,35, 1);
+          }
+        }
+
+        &.zero {
+          // background-image: url(../img/x14.png);
+          background-image:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAuCAYAAABd5YVlAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPBSURBVHgB5ZuNbhoxEISXNEEJDSlJ2vd/v/7SJP2hLVCPwNJltePzYfts4JOsKCaAb2493rUvEzkOJq7dujZV/c+u/ZFyvHHtzrUL1b9y7aXvzZfSPhB0IbsLtV4rKe7ctWuj/6dE0LK4iFZc3FupA27mjdG/du2XRNCquKFoHYs56X+WSFoTt3a0enBzk6IWtCRuC9HqWZD+rzKAFsSNidbN/ueFlAcRa91gLGL/ZABjDDbElWsfJCzsb9c+uraVcWBe25t6aWpHLosSgGj9Ljtxx2IuPGrXMpDa4iIaILCeQRB0KeNFKwilXoOjFtS2BUTni/r9276NKSzIGrWghQXth+yqIAg7drR6skctuOx8uPXBqcR+7hepS3LBYAFxsWK/N15DzZ5y0RjwrdGPXHEl7YDrTy4YLOC5f2U3NTVI6g+tlBCxlrAYcEvCgnekfymJ+AUNvmJNVwh0SMX0SPprT38NIvbK6Mcilrzb5sX1i4n1+kKGwVZd+FcOH89JtoLBopuK4U6l2kPIDrIMOCOhMjdLEOg8N9UejsUOcC1W1Oq8O4kL48OZPdxJmGOyg5nYY8XMzTZWq4jw9qCt4HrfrFofA50Z/S3aQap1QYN71YeM67P+Q1b+MntA2jIx+hdiz4LW7ACkFgzW9Zs6MnFD9qAHh4Vhavwtu0E1ST4XG0Jo44ZlD7ALLyZbGFbkvbVhaWVSmcvo2xVj0YdB+hMEvTD4fdjWYDMMa0j2qAV94jJ7gKBIu6wp9iTt2QFgXvskhYjZz2X2wMrGIlGQSPGCwSJ2szxmcWox7QLeviyKjjdWXH9CEKLFYgGw6rL4eIcc8yBRZoOB+GMeJMYSKhiK29eQYx5W3gK/e9YX3WPD7ADi3shhWGuNfwrz1XfEissioAvKQuTAreS3uOFMwKnYaVnKd+kbuY6xBdyVR4nj0M31EkykMjHiMjuABWyMzxu6uX6y9ImLaWVtlGPqYwGzUpmUs7eTIuS5bN8Ai4Gvxf0zB9q/sPeL/YVBD65lBuMssSuHa9W6WKnqNiQuBLLsAOVi98ENlMc4mtez4MG1T1LnIQ9PiUf6LU221ncxW8C0Zv8LoPNZVpmxyD8bLHH9f7BoQuUt7MGKku725NlhicvSrr5yEfawMfpxJFI9LaqBFjf0pF9fucgiG9/xIGdIV1xM39RnDpg9nGV65sVFtIaOQIbsHjF7aKl6GwUvboodaEL2cC9nhN/cyP3gL7MH7Cj1PVxyMkDcGXkt9SxsSd5/qPeuI/tKYxVFlg3Kf5zB1bc+WclXAAAAAElFTkSuQmCC')
+          ;
+          &:hover {
+            background-color: rgba(84,179,48, 1);
+          }
+        }
+
+        &.black {
+          // background-image: url(../img/x2.png);
+          background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAvCAYAAABUiRJEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQbSURBVHgB1VqLduIgECVptQ9ra3X//wN3j63rq2qr7tx04qY4AyTBlN5zaCxE4MJlGAYz88NwPB6v6NGjlFG64uw9iih9ZFn2EVpXZn4AiHCfHveUbijlntcxEDtKaxqInevFpMkT6Tt6DM3/Ga4LkJ/RIOylwiTJs7RHlPomDpY0AAs7MznyRBzyxmz75F0XZwOQFHkiDtIPntcO5nNdv/MTuOJ04/kulsBb+U8y5AOIbyktKb0TgaNSBwYAdmJgZOVg4H6X30+CPHX6lh7PSjFmd+az3FZ9GISJkQ3lgurCIEZfV00BCR+E/BWlP3WIA2zdp0qdg/JDEuS5s0srGzM01yQeWOdKKMrZb0hm5tFZdLQ0RidptsSbkg8P0VybtDCntCHiGxMBmH2aZSjAXvvF/8nMPECdPcQiXoHk3RWGvph5to52R0SXsA4uVW8sXFMHof9fdgHl76ijU9MQ2r5N+S9U79Z0B2lpFxOQU0ewzUhWsU8dHZgG4BmXHJZ9l8S5H9LSBudTASyrJMcHSboBmCj5jZXUENrB6HPm8QeGhh4z4SWUj0wNsNw1z6rr9T4U8vZlwOMkCfaiWsnfI/cY+3YwOBYgTcK6/GCvh7byT0XuwFDJPzk+X8h75P9oHEhJ7o6+rKt9ObOEDvnf8ulLagwN3QtF3yF3GDlx6Rnr/KB5eJr8n6hy6Rg8EuqCijqVeyX8JeFMgSJ5j/yHVoMwLNKWsvwG646YgCb3s0OO6ts75D8oj4Q80pJh2fIprTNQX2CTekKRdFwu4DvYaPIfsfwlwwLV/DUdgg2cth2/agp0knfIvwwT3Qll8y7l7on9Ldh9F+E90jrkL0lMXFuXAjtfLuLOnSb0PK/Jvwp1bV0CHN/XfI9NyBYbRJ7l/+p5rTNnho/hT0pxEe01AQiO5PDa0chhcGJHYEQw8bFSXERtQ4OeweQdLmNZT63TXxNUiEv9LokHqy+IvOO0VsVt0+BHjT7AidFuYqZ1l52XPO/nExOGpsEPXx9cNzDASxN7EzLzmtxhAA9CfVHlH0B85trLXcg9DZeXfjZWHGKWtpN+LPkHEF+08StyT8NiGAiN4gP779I92iN9v9WFSCDxVn6Fa+YflYbt+zPsqdKF4Fg5/nrB39NOaECU66xcaRyylQIXa/tGRblkBDTlOFExsD3llVj3eOfkWW6S26i6rw75n46/NdAJcSBXGtcadm0nmvyfQ+VP72Gn6IQ4kFuNuwJ/TqvqkD/aGBsPmPidUhydOJBVGoc8pVmv5TZSPahDkvpci+4E/B7nEgemVfWWNjjw5wHkj4tPe0nB+9vYdTmirVVE9xoJ12UHG8vdhkf+zyYh5OzFSWutcXDCYf17HGhMApiNe6WsbSwO8pe+b7u+jX5wFAH7f+qP2BTHArLTAAAAAElFTkSuQmCC');
+
+          &:hover {
+            background-color: rgba(26,28,28, 1);
+          }
+        }
+
+        &.active {
+          &.red {
+            background-color: rgba(218,61,35, 1);
+            &:hover {
+              background-color: rgba(218,61,35, 1);
+            }
+          }
+          &.zero {
+            background-color: rgba(84,179,48, 1);
+            &:hover {
+              background-color: rgba(84,179,48, 1);
+            }
+          }
+          &.black {
+            background-color: rgba(0,0,0, 1);
+            &:hover {
+              background-color: rgba(0,0,0, 1);
+            }
+          }
+        }
+
+        &.disabled {
+          cursor: default;
+          pointer-events: none;
+          background-color: #777;
+          color: rgba(255,255,255, .5)
+        }
+
+        &:active {
+          filter: brightness(110%);
+        }
+      }
+    }
+
+    .bet-reset {
+      position: absolute;
+      right: 0;
+      top: 50px;
+      display: block;
+      font-size: 18px;
+      width: 140px;
+      height: 35px;
+      line-height: 35px;
+      cursor: pointer;
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+      outline: 0;
+      background-color: #3a3a3a;
+      text-decoration: none;
+      &:hover {
+        background-color: #2a2a2a;
+      }
+    }
+
+    .all-bets {
+      display: flex;
+      height: 35px;
+      margin-bottom: 10px;
+      margin: auto;
+      border-radius: 10px;
+
+      & > div {
+        flex-basis: 33.33%;
+        line-height: 35px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        transition: all .2s;
+        cursor: pointer;
+        background: #3A3A3A;
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &.red {
+          background: rgba(218,61,35, 1);
+        }
+
+        &.zero {
+          background: rgba(84,179,48, 1);
+        }
+
+        &.black {
+          // background: rgba(26,28,28, 1);
+          background: black;
+        }
+
+      }
+    }
+  }
+
+  .bet-info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .balance {
+      text-align: left;
+      p {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      p:first-child {
+        padding-left: 35px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-image: url(../img/deposit.svg);
+      }
+    }
+    input[type="submit"] {
+      flex-shrink: 0;
+      border: 0;
+      outline: 0;
+      box-shadow: 0;
+      height: 35px;
+      width: 140px;
+      color: #fff;
+      background: #3A3A3A;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      &:hover {
+        background-color: #AE1D1D;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .roulete-page {
+    .close-btn {
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .roulete-page {
+    .controls {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .roulete .mark {
+      top: 23%;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .roulete-page {
+    .bet-info input[type='submit'],
+    .controls .bet-reset {
+      width: 110px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-height: 650px) {
+  .roulete-page .close-btn {
+    top: 10px;
+  }
+}

@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+  <html lang="ru">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
+  
+    <!-- РУЛЕТКА -->
+    <style type="text/css">
+      /* 9.72972973deg - 1 сектор */
+      /* для рулетки нужно рандомить второй множитель 777 (черех php можно реализовать)*/
+      /*
+          Выводить значение выпавшего числа (#roulete-output) можно
+          от значения transform #roulete-img,
+          которое будет в самом конце анимации
+      */
+      @keyframes rulete-rotate {
+        from { transform: rotate(0); }
+        to { transform: rotate(calc(9.72972973deg * 777)); }
+      }
+    </style>
+    <!-- РУЛЕТКА -->
+  
+    <link rel="stylesheet" href="css/bundle.css">
+    <title>GTA V</title>
+  </head>
+  
+  <body class="display-container">
+  <main class="display-area">
+
+    <!-- toggle bullets .guns -->
+    <ul class="display-area__user-menu  guns">
+
+      <li class="bullets">
+        <div class="bullets__ico  ico"></div>
+        <div class="bullets__count  count">99</div>
+      </li>
+
+      <li class="time">
+        <div class="current-time">15:26</div>
+        <div class="date">01.01.2019</div>
+      </li>
+
+      <li class="sound"></li>
+
+      <li class="cash">
+        <div class="cash__ico  ico"></div>
+        <div class="cash__count  count">$<span>12000000</span></div>
+      </li>
+
+      <li class="bank">
+        <div class="bank__ico  ico"></div>
+        <div class="bank__count  count">$<span>12000000</span></div>
+      </li>
+    </ul>
+  </main>
+  
+    <script src="js/bundle.js"></script>
+  </body>
+  </html>

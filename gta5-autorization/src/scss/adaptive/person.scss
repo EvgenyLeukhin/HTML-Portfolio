@@ -1,0 +1,97 @@
+// large displays
+@media screen and (min-width: 1921px) {
+  .gta-acount.authorization {
+    background-position: 95% bottom, center;
+  }
+
+  .gta-acount.registration {
+    background-position: 95% bottom, center;
+  }
+}
+@media screen and (min-width: 2400px) {
+  .gta-acount.authorization {
+    background-position: 82% bottom, center;
+  }
+
+  .gta-acount.registration {
+    background-position: 82% bottom, center;
+  }
+}
+@media screen and (min-width: 3500px) {
+  .gta-acount.authorization {
+    background-position: 70% bottom, center;
+  }
+
+  .gta-acount.registration {
+    background-position: 70% bottom, center;
+  }
+}
+
+
+// height
+@media screen and (max-height: 950px) and (min-width: 1600px) {
+  .gta-acount.authorization {
+    background-size: 550px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 550px auto, cover;
+  }
+}
+@media screen and (max-height: 850px) and (min-width: 1415px) {
+  .gta-acount.authorization {
+    background-size: 450px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 450px auto, cover;
+  }
+}
+@media screen and (max-height: 706px) and (min-width: 1201px) {
+  .gta-acount.authorization {
+    background-size: 380px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 380px auto, cover;
+  }
+}
+
+// width
+@media screen and (max-width: 1600px) and (min-height: 860px) {
+  .gta-acount.authorization {
+    background-size: 450px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 450px auto, cover;
+  }
+}
+@media screen and (max-width: 1414px) and (min-height: 705px) {
+  .gta-acount.authorization {
+    background-size: 350px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 350px auto, cover;
+  }
+}
+@media screen and (max-width: 1200px) and (min-height: 500px) {
+  .gta-acount.authorization {
+    background-size: 300px auto, cover;
+  }
+
+  .gta-acount.registration {
+    background-size: 300px auto, cover;
+  }
+}
+
+@media screen and (max-width: 1200px), (max-height: 499px) {
+  .gta-acount.authorization {
+    background-image: none, url(../img/bg_auth.png);
+  }
+
+  .gta-acount.registration {
+    background-image: none, url(../img/bg_auth.png);
+  }
+}

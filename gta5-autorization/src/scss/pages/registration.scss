@@ -1,0 +1,14 @@
+.gta-acount.registration {
+  font-family: 'Uni Neue';
+  background-image: url(../img/person_pilot2.png), url(../img/bg_auth.png);
+  background-size: 665px auto, cover;
+
+  .gta-acount__content {
+    margin-top: 130px;
+    form {
+      .btn-cont {
+        margin-top: 45px;
+      }
+    }
+  }
+}

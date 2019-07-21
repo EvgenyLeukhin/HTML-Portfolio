@@ -1,0 +1,43 @@
+.switch-content {
+  .auth-page {
+    display: none;
+    &.show {
+      display: flex;
+      animation-name: opacity, slide;
+      animation-duration: .5s, .5s;
+      animation-timing-function: ease, ease;
+    }
+  }
+  .reg-page {
+    display: none;
+    &.show {
+      display: flex;
+      animation-name: opacity, slide;
+      animation-duration: .5s, .5s;
+      animation-timing-function: ease, ease;
+    }
+  }
+
+  .slots-page {
+    display: none;
+    &.show {
+      display: flex;
+      animation-name: opacity;
+      animation-duration: .5s;
+      animation-timing-function: ease;
+    }
+  }
+  .delete-person-page {
+    display: none;
+    &.show {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+  }
+
+}

@@ -1,0 +1,452 @@
+@media screen and (max-height: 950px) {
+  .gta-acount.slots {
+
+    .slots__wrapper {
+      height: auto;
+      min-height: 600px;
+      header {
+        margin-bottom: 40px;
+        img {
+          width: 330px;
+        }
+        p {
+          margin-top: 32px;
+          width: 300px;
+        }
+        .red-bucks {
+          width: 450px;
+          height: 70px;
+          margin-top: 13px;
+          padding-left: 70px;
+          padding-top: 5px;
+          background-position: 29px center;
+          background-size: 25px auto;
+          background-color: rgba(0,0,0, 0);
+
+          span {
+            font-size: 18px;
+          }
+
+          &__total {
+            b {
+              font-size: 25px;
+            }
+
+            a {
+              font-size: 18px;
+            }
+          }
+        }
+
+      }
+    }
+
+    .slots__cols {
+      a.btn {
+        width: 100%;
+      }
+      & > div {
+        height: 700px;
+        // width: 32%;
+
+        &.active.delete {
+          .active__wrapper {
+            form input[type="submit"] {
+              margin-top: 0;
+            }
+          }
+        }
+
+        &.free.create {
+          .free__wrapper {
+            form input[type='submit'] {
+              margin-top: 0;
+              width: 100%;
+            }
+          }
+        }
+
+        &.free .free__wrapper a.create-new {
+          margin-top: 25px;
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1450px), (max-height: 950px) {
+  .gta-acount.slots .slots__cols {
+    padding-right: 15px;
+
+    & > div {
+      width: 32%;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      h2 {
+        font-size: 30px;
+        line-height: 39px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      &.active.delete {
+        .active__wrapper {
+          form {
+            .input-cont {
+              margin-bottom: 10px;
+            }
+            input {
+              font-size: 16px;
+              padding-bottom: 5px;
+              &[type="submit"] {
+                width: 100%;
+                margin-top: 15px;
+              }
+            }
+
+          }
+        }
+      }
+
+      &.free.create {
+        .free__wrapper {
+          form input[type='submit'] {
+            width: 100%;
+          }
+        }
+      }
+
+      &.free {
+        .free__wrapper {
+          a.create-new {
+            background-position: 25% 15px;
+            margin-top: 25px;
+          }
+        }
+      }
+
+      &.non-active::before {
+        width: 140px;
+        height: 140px;
+        margin-left: -70px;
+        top: 40px;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-height: 835px) {
+  .gta-acount.slots {
+    .slots__cols {
+
+      a.btn {
+        height: 35px;
+      }
+      & > div {
+        padding-top: 150px;
+        height: 480px;
+
+        h2 {
+          font-size: 25px;
+          line-height: 33px;
+        }
+
+        &.active {
+          .active__wrapper {
+            .person-cont {
+              height: 150px;
+
+              .active-persone {
+                width: 200px;
+                margin-left: -100px;
+              }
+            }
+          }
+        }
+
+        &.active.delete .active__wrapper .person-cont::after {
+          width: 80px;
+          height: 80px;
+          margin-left: -40px;
+        }
+
+        &.free {
+          &::before {
+            width: 80px;
+            top: 42px;
+            height: 80px;
+            margin-left: -40px;
+            background-size: 40px auto;
+          }
+          .free__wrapper {
+            .some-persone {
+              height: 150px;
+              min-height: auto;
+            }
+
+            a.create-new {
+              padding-left: 0;
+              background: none;
+              margin-top: 56px;
+            }
+          }
+        }
+
+        &.non-active::before {
+          width: 80px;
+          height: 80px;
+          margin-left: -40px;
+          background-size: 40px auto;
+        }
+
+        &.active.delete {
+          .active__wrapper {
+            form input[type='submit'] {
+              height: 35px;
+              margin-top: 20px;
+            }
+            a.delete-cancel {
+              margin-top: 0;
+            }
+          }
+        }
+
+        &.active {
+          .active__wrapper {
+            h3 {
+              margin-top: 2px;
+              margin-bottom: 10px;
+            }
+            .characteristics {
+              margin-bottom: 20px;
+              li {
+                font-size: 16px;
+                margin-bottom: 8px;
+              }
+            }
+            a.btn-enter {
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        &.free.create {
+          .free__wrapper {
+            h2 {
+              margin-bottom: 31px;
+            }
+
+            a.cancel {
+              margin-top: 0;
+            }
+
+            form {
+              input {
+                font-size: 16px;
+                padding-bottom: 5px;
+              }
+              input[type='date'] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+              }
+              input[type='date'] {
+                padding-top: 0;
+                padding-left: 130px;
+              }
+              input[type='submit'] {
+                height: 35px;
+                margin-top: 17px;
+              }
+              .input-cont {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+
+        &.free.blocked {
+          .blocked-cont__reason {
+            margin-bottom: 10px;
+            h4, p {
+              font-size: 16px;
+              line-height: 21px;
+            }
+          }
+          .blocked-cont__dates {
+            margin-top: 20px;
+            li {
+              font-size: 16px;
+              line-height: 21px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        &.non-active .non-active__wrapper p.bonus {
+          margin-bottom: 28px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .gta-acount.slots .slots__wrapper {
+    width: 100%;
+    min-width: 800px;
+  }
+}
+
+@media screen and (max-width: 1305px) {
+  .gta-acount.slots {
+    .slots__cols {
+      & > div {
+
+        &.free.create {
+          .free__wrapper {
+            form {
+              input {
+                font-size: 16px;
+                padding-bottom: 5px;
+              }
+              input[type="date"] {
+                padding-left: 130px;
+              }
+              input[type="date"] + .placeholder {
+                font-size: 16px;
+                top: 2px;
+              }
+            }
+          }
+        }
+
+      &.free.blocked .blocked-cont__reason h4,
+      &.free.blocked .blocked-cont__reason p {
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      &.free.blocked .blocked-cont__dates li {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 10px;
+      }
+
+      }
+    }
+  }
+
+  .gta-acount.slots .slots__cols a.btn {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+  .gta-acount.slots {
+    .slots__wrapper {
+      header {
+        justify-content: space-between;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          width: 200px;
+          margin-top: 42px;
+        }
+        .red-bucks {
+          margin-left: 0;
+          width: 250px;
+          padding-left: 0;
+          background-image: none;
+        }
+      }
+    }
+
+    .slots__cols {
+      a.btn {
+        height: 35px;
+        font-size: 16px;
+      }
+      & > div {
+        &.active.delete .active__wrapper form input[type='submit'] {
+          height: 35px;
+          font-size: 16px;
+        }
+        &.free.create .free__wrapper form input[type='submit'] {
+          height: 35px;
+          font-size: 16px;
+        }
+        &.free .free__wrapper a.create-new {
+          padding-left: 0;
+          background-image: none;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  .gta-acount.slots {
+    .slots__cols > div {
+      padding-left: 10px;
+      padding-right: 10px;
+      h2 {
+        font-size: 25px;
+        line-height: 33px;
+      }
+      &.active .active__wrapper .characteristics li {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      &.active.delete .active__wrapper .person-cont::after {
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+      }
+      &.active .active__wrapper .person-cont .active-persone {
+        width: 250px;
+        margin-left: -125px;
+      }
+      &.free::before {
+        top: 42px;
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        background-size: 40px auto;
+      }
+      &.non-active::before {
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        background-size: 40px auto;
+      }
+      &.free.blocked .blocked-cont__dates li {
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+      }
+      &.free.blocked .blocked-cont__reason {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      &.free.blocked .blocked-cont__dates {
+        margin-top: 5px;
+      }
+      &.non-active .non-active__wrapper p.price {
+        margin-top: 10px;
+      }
+    }
+  }
+
+}

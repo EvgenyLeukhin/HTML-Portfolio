@@ -1,0 +1,153 @@
+.speedometr {
+  background-image: url(../img/bg-car.jpg);
+  overflow: hidden;
+}
+
+/*!
+	*speedometer.css
+	*author: Manivannan R
+  *project: Speedometer
+*/
+
+
+.indicators {
+  position: absolute;
+  z-index: 100;
+  bottom: -30px;
+  left: 50%;
+  width: 240px;
+  height: 250px;
+  margin-left: -120px;
+
+  .gas {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 35px;
+    left: -20px;
+
+    &.empty {
+      i {
+        background-image: url(../img/gas-empty.svg);
+      }
+    }
+
+    i {
+      height: 30px;
+      width: 30px;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/gas.svg);
+    }
+
+    span {
+      text-align: center;
+      color: #fff;
+      font-family: 'Uni Neue';
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  .doors {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    background-image: url(../img/doors.svg);
+    bottom: 35px;
+    right: -5px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    &.lock {
+      background-image: url(../img/doors-lock.svg);
+    }
+  }
+
+  .engine {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 88%;
+    background-image: url(../img/engine.svg);
+    bottom: 65px;
+    right: -24px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    &.damage {
+      background-image: url(../img/engine-damage.svg);
+    }
+  }
+}
+
+.envelope {
+	background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -120px;
+  border-radius: 50%;
+}
+.speedNobe{
+	position:absolute;
+	width:100%;
+	z-index:10;
+	transition: all 1s;
+}
+.speedPosition {
+	position: absolute;
+	color: #FFF;
+	text-align: center;
+	line-height: 60px;
+	font-family:arial;
+	font-size: 25px;
+	font-weight:bold;
+	border-radius: 50%;
+	background: #191919;
+	box-shadow: 0 0 3px 3px black;
+}
+.fonts {
+	font-family:arial;
+	font-weight:bold;
+	width:100%;
+	text-align:center;
+}
+
+.speedNobe div {
+	background: #48a3cb;
+	position: absolute;
+	height: 100%;
+	top: 0;
+}
+.numb,.nob {
+	transition: opacity 1s;
+	position: absolute;
+	opacity: 0.5;
+}
+.nob {
+	background:#eee;
+	box-shadow: 0 0 2px 1px #eee;
+}
+.numb {
+	color:#eee;
+	text-align: left;
+	overflow: hidden;
+	opacity: 0.5;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+.nob.bright{
+	opacity: 1;
+}
+.nob.danger{
+	background: #FF113A;
+	box-shadow: 0 0 2px 1px #FF113A;
+}
+.numb.bright {
+	opacity: 1;
+}
+.numb.danger {
+	color: #FF113A;
+}
