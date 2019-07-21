@@ -6,16 +6,16 @@ Mail: EvgenyLeukhin@ya.ru
 VK: https://vk.com/leukhin_ei
 <hr>
 <b>GTA V</b><br>
-[Autorization] [https://evgenyleukhin.github.io/gta5-autorization/]<br>
-[Delete-person] [https://evgenyleukhin.github.io/gta5-autorization/delete-person.html]<br>
-[Registration] [https://evgenyleukhin.github.io/gta5-autorization/registration.html]<br>
-[Slots] [https://evgenyleukhin.github.io/gta5-autorization/slots.html]<br>
-[Rules] [https://evgenyleukhin.github.io/gta5-autorization/rules.html]<br>
-[User-places] [https://evgenyleukhin.github.io/gta5-html/]<br>
-[Game-menu] [https://evgenyleukhin.github.io/gta5-game-menu/]<br>
-[Reports] [https://evgenyleukhin.github.io/gta5-game-menu/reports.html]<br>
-[Roulete] [https://evgenyleukhin.github.io/gta5-game-menu/roulete.html]<br>
-[Speedometr] [https://evgenyleukhin.github.io/gta5-game-menu/speedometr.html]<br>
+[Autorization] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-autorization/]<br>
+[Delete-person] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-autorization/delete-person.html]<br>
+[Registration] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-autorization/registration.html]<br>
+[Slots] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-autorization/slots.html]<br>
+[Rules] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-autorization/rules.html]<br>
+[User-places] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-html/]<br>
+[Game-menu] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-game-menu/]<br>
+[Reports] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-game-menu/reports.html]<br>
+[Roulete] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-game-menu/roulete.html]<br>
+[Speedometr] [https://evgenyleukhin.github.io/HTML-Portfolio/gta5-game-menu/speedometr.html]<br>
 <hr>
 <b>Some examples:</b>
 <br>
